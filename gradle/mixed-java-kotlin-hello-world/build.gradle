@@ -1,0 +1,36 @@
+import org.jetbrains.kotlin.gradle.plugin.*
+
+buildscript {
+  repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+      url 'http://repository.jetbrains.com/all'
+    }
+  }
+  dependencies {
+    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:0.1-SNAPSHOT'
+  }
+}
+
+apply plugin: KotlinPlugin
+
+sourceSets {
+  deploy
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  compile 'com.google.guava:guava:12.0'
+  compile 'org.jetbrains.kotlin:kotlin-stdlib:0.1-SNAPSHOT'
+  deployCompile 'com.google.guava:guava:12.0'
+  testCompile  'org.testng:testng:6.8'
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion="1.4"
+}
