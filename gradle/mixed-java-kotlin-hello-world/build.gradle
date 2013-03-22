@@ -2,7 +2,6 @@ import org.jetbrains.kotlin.gradle.plugin.*
 
 buildscript {
   repositories {
-    mavenLocal()
     mavenCentral()
     maven {
       url 'http://repository.jetbrains.com/all'
