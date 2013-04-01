@@ -1,0 +1,34 @@
+buildscript {
+  repositories {
+    mavenCentral()
+    maven {
+      url 'http://repository.jetbrains.com/all'
+    }
+  }
+  dependencies {
+    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:0.1-SNAPSHOT'
+  }
+}
+
+apply plugin: "kotlin"
+
+compileKotlin {
+    kotlinOptions.annotations = file('annotations')
+}
+
+repositories {
+  mavenCentral()
+  maven {
+    url 'http://repository.jetbrains.com/all'
+  }
+}
+
+dependencies {
+  compile 'com.google.guava:guava:12.0'
+  compile 'org.jetbrains.kotlin:kotlin-stdlib:0.1-SNAPSHOT'
+  testCompile 'junit:junit:4.11'
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = "1.4"
+}
