@@ -30,6 +30,8 @@ dependencies {
   testCompile  'org.testng:testng:6.8'
 }
 
+test.testClassesDir = project.tasks.compileTestKotlin.destinationDir
+
 task wrapper(type: Wrapper) {
   gradleVersion="1.4"
 }
