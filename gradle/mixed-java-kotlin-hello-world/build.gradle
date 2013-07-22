@@ -2,11 +2,11 @@ buildscript {
   repositories {
     mavenCentral()
     maven {
-      url 'http://repository.jetbrains.com/all'
+      url 'http://oss.sonatype.org/content/repositories/snapshots'
     }
   }
   dependencies {
-    classpath 'http://oss.sonatype.org/content/repositories/snapshots'
+    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:0.1-SNAPSHOT'
   }
 }
 
