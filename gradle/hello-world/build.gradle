@@ -2,7 +2,7 @@ buildscript {
   repositories {
     mavenCentral()
     maven {
-      url 'http://repository.jetbrains.com/all'
+      url 'http://oss.sonatype.org/content/repositories/snapshots'
     }
   }
   dependencies {
@@ -19,7 +19,7 @@ compileKotlin {
 repositories {
   mavenCentral()
   maven {
-    url 'http://repository.jetbrains.com/all'
+    url 'http://oss.sonatype.org/content/repositories/snapshots'
   }
 }
 
