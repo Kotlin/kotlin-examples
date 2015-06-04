@@ -1,0 +1,41 @@
+{
+    "coord": {
+        "lon": -2.93,
+        "lat": 43.26
+    },
+    "sys": {
+        "message": 0.0139,
+        "country": "ES",
+        "sunrise": 1429766168,
+        "sunset": 1429815829
+    },
+    "weather": [
+        {
+            "id": 802,
+            "main": "Clouds",
+            "description": "scattered clouds",
+            "icon": "03d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 283.681,
+        "temp_min": 283.681,
+        "temp_max": 283.681,
+        "pressure": 991.72,
+        "sea_level": 1034.92,
+        "grnd_leve": 991.72,
+        "humidity": 98
+    },
+    "wind": {
+        "speed": 1.07,
+        "deg": 144.001
+    },
+    "clouds": {
+        "all": 36
+    },
+    "dt": 1429773245,
+    "id": 3128026,
+    "name": "Bilbao",
+    "cod": 200
+}
