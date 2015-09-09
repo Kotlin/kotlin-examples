@@ -4,9 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.app.Activity
 import android.view.Menu
-import android.view.View
 import android.widget.Button
-import org.jetbrains.kotlin.gradle.androidsample.R
 
 open class MainActivity2 : Activity() {
 
@@ -14,7 +12,7 @@ open class MainActivity2 : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        var next: Button = findViewById(R.id.Button02) as Button
+        var next = findViewById(R.id.Button02) as Button
         next.setOnClickListener {
             val intent: Intent = Intent()
             setResult(Activity.RESULT_OK, intent)
@@ -24,7 +22,7 @@ open class MainActivity2 : Activity() {
 
     public override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_activity2, menu)
+        menuInflater.inflate(R.menu.main_activity2, menu)
         return true
     }
 }

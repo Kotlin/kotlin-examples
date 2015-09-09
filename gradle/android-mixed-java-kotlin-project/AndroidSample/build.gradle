@@ -7,7 +7,7 @@ buildscript {
     }
     dependencies {
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:0.1-SNAPSHOT'
-        classpath 'com.android.tools.build:gradle:1.1.0'
+        classpath 'com.android.tools.build:gradle:1.2.3'
     }
 }
 apply plugin: 'com.android.application'
@@ -21,17 +21,17 @@ repositories {
 }
 
 dependencies {
-    compile files('libs/android-support-v4.jar')
+    compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'org.jetbrains.kotlin:kotlin-stdlib:0.1-SNAPSHOT'
 }
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "19.1"
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
         minSdkVersion 7
-        targetSdkVersion 16
+        targetSdkVersion 22
     }
 
     sourceSets {
