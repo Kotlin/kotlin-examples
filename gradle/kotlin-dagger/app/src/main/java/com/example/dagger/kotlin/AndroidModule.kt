@@ -33,11 +33,13 @@ public class AndroidModule(private val application: BaseApplication) {
      * Allow the application context to be injected but require that it be annotated with
      * [@Annotation][ForApplication] to explicitly differentiate it from an activity context.
      */
-    @Provides @Singleton @ForApplication fun provideApplicationContext(): Context {
+    @Provides @Singleton @ForApplication
+    fun provideApplicationContext(): Context {
         return application
     }
 
-    @Provides @Singleton fun provideLocationManager(): LocationManager {
+    @Provides @Singleton
+    fun provideLocationManager(): LocationManager {
         return application.getSystemService(LOCATION_SERVICE) as LocationManager
     }
 }

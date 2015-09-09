@@ -15,10 +15,8 @@
  */
 package com.example.dagger.kotlin
 
-import java.lang.annotation.Retention
-import java.lang.annotation.RetentionPolicy.RUNTIME
 import javax.inject.Qualifier
 
 @Qualifier
-@Retention(RUNTIME)
+@Retention(AnnotationRetention.RUNTIME)
 annotation public class ForApplication

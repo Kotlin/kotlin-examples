@@ -5,7 +5,7 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = arrayOf(javaClass<AndroidModule>()))
+@Component(modules = arrayOf(AndroidModule::class))
 public interface ApplicationComponent {
     public fun inject(application: BaseApplication)
     public fun inject(homeActivity: HomeActivity)

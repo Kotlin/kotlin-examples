@@ -24,15 +24,14 @@ import kotlinx.android.synthetic.activity_main.locationInfo
 import javax.inject.Inject
 
 public class HomeActivity : DemoActivity() {
-    var locationManager: LocationManager? = null
-        @Inject set
+    @Inject lateinit var locationManager: LocationManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        (getApplication() as DemoApplication).component().inject(this)
+        (application as DemoApplication).component().inject(this)
 
         // TODO do something with the injected dependencies here!
-        locationInfo.setText("Injected LocationManager:\n$locationManager")
+        locationInfo.text = "Injected LocationManager:\n$locationManager"
     }
 }

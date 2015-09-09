@@ -22,6 +22,6 @@ public abstract class DemoActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Perform injection so that when this call returns all dependencies will be available for use.
-        (getApplication() as DemoApplication).component().inject(this)
+        (application as DemoApplication).component().inject(this)
     }
 }
