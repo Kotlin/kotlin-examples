@@ -1,15 +1,14 @@
 package com.example.dagger.kotlin
 
 public class DemoApplication : BaseApplication() {
-
-    private lateinit var component: ApplicationComponent
+    lateinit var component: ApplicationComponent
+        protected set
 
     override fun onCreate() {
         super.onCreate()
-        component = initDaggerComponent()
-        component().inject(this) // As of now, LocationManager should be injected into this.
+        val component = initDaggerComponent()
+        component.inject(this) // As of now, LocationManager should be injected into this.
+        this.component = component
     }
-
-    public fun component(): ApplicationComponent = component
 
 }

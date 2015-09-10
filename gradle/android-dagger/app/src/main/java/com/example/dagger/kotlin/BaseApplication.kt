@@ -13,16 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.dagger.kotlin;
+package com.example.dagger.kotlin
 
-import android.app.Application;
+import android.app.Application
 
-public abstract class BaseApplication extends Application {
+public abstract class BaseApplication : Application() {
 
-  protected ApplicationComponent initDaggerComponent() {
-    return DaggerApplicationComponent.builder()
-            .androidModule(new AndroidModule(this))
-            .build();
-  }
+    protected fun initDaggerComponent(): ApplicationComponent {
+        return DaggerApplicationComponent.builder().androidModule(AndroidModule(this)).build()
+    }
 
 }
