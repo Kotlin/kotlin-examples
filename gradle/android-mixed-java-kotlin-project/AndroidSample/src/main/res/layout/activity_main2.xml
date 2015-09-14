@@ -14,11 +14,11 @@
             android:layout_height="wrap_content"
             android:text="Activity 2" />
 
-    <Button android:text="Next"
+    <Button android:text="Close"
             android:id="@+id/Button02"
-            android:layout_width="250px"
-            android:textSize="18px"
-            android:layout_height="55px">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp">
     </Button>
 
 </LinearLayout>
