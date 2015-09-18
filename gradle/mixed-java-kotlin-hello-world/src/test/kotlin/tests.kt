@@ -6,7 +6,7 @@ import kotlin.test.assertEquals
 import org.junit.Test as test
 
 class TestSource() {
-    test fun f() {
+    @test fun f() {
         val example : KotlinGreetingJoiner = KotlinGreetingJoiner(Greeter("Hi"))
         example.addName("Harry")
         example.addName("Ron")
