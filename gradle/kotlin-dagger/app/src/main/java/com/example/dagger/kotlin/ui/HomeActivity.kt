@@ -25,7 +25,7 @@ import javax.inject.Inject
 
 public class HomeActivity : DemoActivity() {
     var locationManager: LocationManager? = null
-        [Inject] set
+        @Inject set
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
