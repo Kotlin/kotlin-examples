@@ -7,8 +7,7 @@ public class DemoApplication : BaseApplication() {
 
     private var component: ApplicationComponent? = null
 
-    var locationManager: LocationManager? = null // for some reason.
-        @Inject set
+    @Inject lateinit val locationManager: LocationManager
 
     override fun onCreate() {
         super.onCreate()
