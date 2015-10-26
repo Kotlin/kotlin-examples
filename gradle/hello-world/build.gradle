@@ -13,13 +13,9 @@ buildscript {
 apply plugin: 'kotlin'
 apply plugin: 'application'
 
-mainClassName = 'demo.DemoPackage'
+mainClassName = 'demo.HelloWorldKt'
 
 defaultTasks 'run'
-
-compileKotlin {
-    kotlinOptions.annotations = file('annotations')
-}
 
 repositories {
   mavenCentral()
@@ -35,5 +31,5 @@ dependencies {
 }
 
 task wrapper(type: Wrapper) {
-  gradleVersion = "1.6"
+  gradleVersion = "2.7"
 }
