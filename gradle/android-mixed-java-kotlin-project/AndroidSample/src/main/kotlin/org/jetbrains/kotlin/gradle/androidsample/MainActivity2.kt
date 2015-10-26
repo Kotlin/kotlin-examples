@@ -15,13 +15,11 @@ open class MainActivity2 : Activity() {
         setContentView(R.layout.activity_main2)
 
         var next: Button = findViewById(R.id.Button02) as Button
-        next.setOnClickListener(object : View.OnClickListener {
-            public override fun onClick(view: View) {
-                val intent: Intent = Intent()
-                setResult(Activity.RESULT_OK, intent)
-                finish()
-            }
-        })
+        next.setOnClickListener {
+            val intent: Intent = Intent()
+            setResult(Activity.RESULT_OK, intent)
+            finish()
+        }
     }
 
     public override fun onCreateOptionsMenu(menu: Menu?): Boolean {
