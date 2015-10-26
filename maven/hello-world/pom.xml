@@ -72,7 +72,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>hello.HelloPackage</mainClass>
+                    <mainClass>hello.HelloKt</mainClass>
                 </configuration>
             </plugin>
         </plugins>
