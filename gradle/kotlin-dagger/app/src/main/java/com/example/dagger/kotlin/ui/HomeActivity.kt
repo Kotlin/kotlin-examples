@@ -24,8 +24,7 @@ import kotlinx.android.synthetic.activity_main.locationInfo
 import javax.inject.Inject
 
 public class HomeActivity : DemoActivity() {
-    var locationManager: LocationManager? = null
-        @Inject set
+    @Inject lateinit val locationManager: LocationManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
