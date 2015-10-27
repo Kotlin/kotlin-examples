@@ -1,1 +1,1 @@
-include ':AndroidSample'
+include ':app'
