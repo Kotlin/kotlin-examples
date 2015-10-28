@@ -5,8 +5,11 @@ import org.junit.Test
 
 
 public class KotlinJunitTest {
-    @Test public fun firstTest() {
+
+    @Test
+    public fun firstTest() {
         Assert.assertTrue(1 == 1)
     }
+
 }
 

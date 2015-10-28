@@ -7,8 +7,6 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-import org.jetbrains.kotlin.gradle.androidsample.R;
-
 public class MainActivity extends Activity {
 
     @Override
