@@ -8,13 +8,9 @@ import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
-import butterknife.ButterKnife
-import butterknife.Bind
-import butterknife.OnClick
-import butterknife.OnItemClick
-import butterknife.OnLongClick
 
 import android.widget.Toast.LENGTH_SHORT
+import butterknife.*
 
 public class SimpleActivity : Activity() {
 
@@ -35,6 +31,10 @@ public class SimpleActivity : Activity() {
 
     @Bind(R.id.title, R.id.subtitle, R.id.hello)
     lateinit var headerViews: MutableList<View>
+
+    @JvmField
+    @BindColor(R.color.blue)
+    var titleTextColor: Int = 0
 
     private lateinit var adapter: SimpleAdapter
 
@@ -64,6 +64,8 @@ public class SimpleActivity : Activity() {
         subtitle.text = "Field and method binding for Android views."
         footer.text = "by Jake Wharton"
         hello.text = "Say Hello"
+
+        title.setTextColor(titleTextColor)
 
         adapter = SimpleAdapter(this)
         listOfThings.adapter = adapter
