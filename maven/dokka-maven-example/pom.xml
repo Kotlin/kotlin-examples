@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <kotlin.version>1.0.0-beta-1103</kotlin.version>
-        <dokka.version>0.9</dokka.version>
+        <dokka.version>0.9.1</dokka.version>
     </properties>
 
     <dependencies>
