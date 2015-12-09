@@ -15,7 +15,7 @@ It will compile:
  * src/main/kotlin/Hello.kt into target/classes/hello/namespace.class
  * src/main/kotlin/Hello.kt into target/test-classes/hello/tests/HelloTest.class
 
-Then run tests, and finnaly run your man hello 'namespace'.
+Then run tests, and finally run your man hello 'namespace'.
 
 ## Only running the example
 
