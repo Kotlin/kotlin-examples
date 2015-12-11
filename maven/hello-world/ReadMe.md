@@ -12,10 +12,10 @@ If you have maven on your path, simple type:
 	mvn test
 	
 It will compile:
- * src/main/kotlin/Hello.kt into target/classes/hello/namespace.class
- * src/main/kotlin/Hello.kt into target/test-classes/hello/tests/HelloTest.class
+ * src/main/kotlin/Hello.kt into target/classes/hello/HelloKt.class
+ * src/test/kotlin/HelloTest.kt into target/test-classes/hello/tests/HelloTest.class
 
-Then run tests, and finally run your man hello 'namespace'.
+Then run tests, and finally run your main HelloKt class.
 
 ## Only running the example
 
