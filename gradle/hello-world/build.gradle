@@ -28,6 +28,7 @@ dependencies {
   compile 'com.google.guava:guava:18.0'
   compile 'org.jetbrains.kotlin:kotlin-stdlib:0.1-SNAPSHOT'
   testCompile 'junit:junit:4.11'
+  testCompile 'org.jetbrains.kotlin:kotlin.test.junit:0.1-SNAPSHOT'
 }
 
 task wrapper(type: Wrapper) {
