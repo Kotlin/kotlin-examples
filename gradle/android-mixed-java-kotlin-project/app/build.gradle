@@ -18,7 +18,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.example.dagger.kotlin"
+        applicationId "org.example.kotlin.mixed"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
