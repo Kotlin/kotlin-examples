@@ -72,14 +72,12 @@ public class SimpleActivity : Activity() {
     }
 
     companion object {
-        private val ALPHA_FADE = object : ButterKnife.Action<View> {
-            override fun apply(view: View, index: Int) {
-                with (AlphaAnimation(0f, 1f)) {
-                    fillBefore = true
-                    duration = 500
-                    startOffset = (index * 100).toLong()
-                    view.startAnimation(this)
-                }
+        private val ALPHA_FADE = ButterKnife.Action<View> { view, index ->
+            with (AlphaAnimation(0f, 1f)) {
+                fillBefore = true
+                duration = 500
+                startOffset = (index * 100).toLong()
+                view.startAnimation(this)
             }
         }
     }

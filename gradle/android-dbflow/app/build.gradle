@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.0.0-beta-1038'
+    ext.kotlin_version = '1.0.0-beta-4583'
 
     repositories {
         jcenter()
@@ -16,7 +16,7 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '23.0.1'
+    buildToolsVersion '23.0.2'
 
     defaultConfig {
         minSdkVersion 14
@@ -32,9 +32,9 @@ android {
 
 dependencies {
     // Android Support Libraries
-    compile 'com.android.support:appcompat-v7:23.1.0'
-    compile 'com.android.support:cardview-v7:23.1.0'
-    compile 'com.android.support:recyclerview-v7:23.1.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:cardview-v7:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
 
     // DBFlow
     kapt 'com.raizlabs.android:DBFlow-Compiler:2.2.1'

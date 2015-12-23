@@ -1,8 +1,8 @@
 package mobi.porquenao.poc.kotlin.core
 
 import com.raizlabs.android.dbflow.converter.TypeConverter
+import java.util.*
 import com.raizlabs.android.dbflow.annotation.TypeConverter as TypeConverterAnnotation
-import java.util.Calendar
 
 @TypeConverterAnnotation
 public class CalendarConverter : TypeConverter<Long, Calendar>() {

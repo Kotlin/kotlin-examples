@@ -5,8 +5,8 @@ import android.graphics.BitmapFactory
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import mobi.porquenao.poc.kotlin.R
-import kotlinx.android.synthetic.main.*
 
 public abstract class BaseActivity : AppCompatActivity() {
 

@@ -21,11 +21,12 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import io.realm.Realm
+import io.realm.Sort
 import io.realm.examples.kotlin.model.Cat
 import io.realm.examples.kotlin.model.Dog
 import io.realm.examples.kotlin.model.Person
 import org.jetbrains.anko.*
-import kotlinx.android.synthetic.activity_realm_basic_example.*
+import kotlinx.android.synthetic.main.activity_realm_basic_example.*
 
 public class KotlinExampleActivity : Activity() {
     private companion object {
@@ -51,7 +52,7 @@ public class KotlinExampleActivity : Activity() {
 
         val realmConfig = realm.configuration
         // More complex operations can be executed on another thread
-        async {
+        async() {
             fun realmInstance() = Realm.getInstance(realmConfig)
             var info = complexReadWrite(realmInstance()) + complexQuery(realmInstance())
 
@@ -145,7 +146,7 @@ private fun complexReadWrite(realm: Realm): String {
 
             // Sorting
             val sortedPersons = realm.allObjects(Person::class.java)
-            sortedPersons.sort("age", false)
+            sortedPersons.sort("age", Sort.DESCENDING)
             check(realm.allObjects(Person::class.java).last().name == sortedPersons.first().name)
 
             append("\nSorting ${sortedPersons.last().name} == ${realm.allObjects(Person::class.java).first().name}")
