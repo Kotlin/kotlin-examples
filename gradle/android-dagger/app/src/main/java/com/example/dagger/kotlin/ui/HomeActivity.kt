@@ -20,7 +20,7 @@ import android.os.Bundle
 import com.example.dagger.kotlin.DemoActivity
 import com.example.dagger.kotlin.DemoApplication
 import com.example.dagger.kotlin.R
-import kotlinx.android.synthetic.activity_main.locationInfo
+import kotlinx.android.synthetic.main.activity_main.locationInfo
 import javax.inject.Inject
 
 public class HomeActivity : DemoActivity() {
