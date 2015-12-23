@@ -1,11 +1,11 @@
 package hello.tests
 
-import junit.framework.TestCase
-import kotlin.test.assertEquals
 import hello.getHelloString
+import kotlin.test.assertEquals
+import org.junit.Test
 
-class HelloTest : TestCase() {
-    fun testAssert() : Unit {
+class HelloTest {
+    @Test fun testAssert() : Unit {
         assertEquals("Hello, world!", getHelloString())
     }
 }
