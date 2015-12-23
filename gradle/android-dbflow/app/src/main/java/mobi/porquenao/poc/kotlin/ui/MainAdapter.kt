@@ -6,11 +6,11 @@ import android.text.format.DateFormat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.main_item.view.*
 import mobi.porquenao.poc.kotlin.R
 import mobi.porquenao.poc.kotlin.core.Item
 import mobi.porquenao.poc.kotlin.core.ItemRepository
 import java.util.*
-import kotlinx.android.synthetic.main_item.view.*
 
 public class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
@@ -19,13 +19,11 @@ public class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
     init {
         mItems = ItemRepository.getAll()
-        mOnClickListener = object : View.OnClickListener {
-            override fun onClick(v: View) {
-                val item = v.tag as Item
-                item.updatedAt = Calendar.getInstance()
-                item.save()
-                notifyDataSetChanged()
-            }
+        mOnClickListener = View.OnClickListener { v ->
+            val item = v.tag as Item
+            item.updatedAt = Calendar.getInstance()
+            item.save()
+            notifyDataSetChanged()
         }
     }
 

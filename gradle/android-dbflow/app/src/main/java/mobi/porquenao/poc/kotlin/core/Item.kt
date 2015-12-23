@@ -4,8 +4,7 @@ import com.raizlabs.android.dbflow.annotation.Column
 import com.raizlabs.android.dbflow.annotation.PrimaryKey
 import com.raizlabs.android.dbflow.annotation.Table
 import com.raizlabs.android.dbflow.structure.BaseModel
-
-import java.util.Calendar
+import java.util.*
 
 @Table(tableName = "items", databaseName = AppDatabase.NAME)
 public class Item : BaseModel() {
