@@ -1,12 +1,10 @@
 buildscript {
+  ext.kotlin_version = '1.0.0-rc-1036'
   repositories {
     mavenCentral()
-    maven {
-      url 'http://oss.sonatype.org/content/repositories/snapshots'
-    }
   }
   dependencies {
-    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:0.1-SNAPSHOT'
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
 }
 
@@ -19,16 +17,12 @@ defaultTasks 'run'
 
 repositories {
   mavenCentral()
-  maven {
-    url 'http://oss.sonatype.org/content/repositories/snapshots'
-  }
 }
 
 dependencies {
-  compile 'com.google.guava:guava:18.0'
-  compile 'org.jetbrains.kotlin:kotlin-stdlib:0.1-SNAPSHOT'
+  compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   testCompile 'junit:junit:4.11'
-  testCompile 'org.jetbrains.kotlin:kotlin-test-junit:0.1-SNAPSHOT'
+  testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
 }
 
 task wrapper(type: Wrapper) {
