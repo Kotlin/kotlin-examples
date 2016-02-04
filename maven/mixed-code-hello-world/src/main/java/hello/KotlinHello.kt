@@ -1,7 +1,7 @@
 package hello
 
-public val KotlinHelloString : String = "Hello from Kotlin!"
+val KotlinHelloString : String = "Hello from Kotlin!"
 
-public fun getHelloStringFromJava() : String {
+fun getHelloStringFromJava() : String {
     return JavaHello.JavaHelloString!!;
 }
