@@ -1,12 +1,10 @@
 buildscript {
+  ext.kotlin_version = '1.0.0-rc-1036'
   repositories {
     mavenCentral()
-    maven {
-      url 'http://oss.sonatype.org/content/repositories/snapshots'
-    }
   }
   dependencies {
-    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:0.1-SNAPSHOT'
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
 }
 
@@ -21,21 +19,16 @@ sourceSets {
 
 repositories {
   mavenCentral()
-  maven {
-    url 'http://oss.sonatype.org/content/repositories/snapshots'
-  }
 }
 
 dependencies {
-  compile 'com.google.guava:guava:12.0'
-  compile 'org.jetbrains.kotlin:kotlin-stdlib:0.1-SNAPSHOT'
-  deployCompile 'com.google.guava:guava:12.0'
+  compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   testCompile  'org.testng:testng:6.8'
-  testCompile 'org.jetbrains.kotlin:kotlin-test-junit:0.1-SNAPSHOT'
+  testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
 }
 
 test.testClassesDir = project.tasks.compileTestKotlin.destinationDir
 
 task wrapper(type: Wrapper) {
-  gradleVersion="1.6"
+  gradleVersion="2.7"
 }

@@ -1,7 +1,5 @@
 package demo 
 
-import com.google.common.primitives.Ints
-import com.google.common.base.Joiner
 import kotlin.test.assertEquals
 import org.junit.Test as test
 
