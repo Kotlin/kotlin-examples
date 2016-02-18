@@ -1,5 +1,5 @@
 buildscript {
-  ext.kotlin_version = '1.0.0-rc-1036'
+  ext.kotlin_version = '1.0.0'
   repositories {
     mavenCentral()
   }
@@ -23,7 +23,7 @@ repositories {
 
 dependencies {
   compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  testCompile  'org.testng:testng:6.8'
+  testCompile  'junit:junit:4.11'
   testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
 }
 
