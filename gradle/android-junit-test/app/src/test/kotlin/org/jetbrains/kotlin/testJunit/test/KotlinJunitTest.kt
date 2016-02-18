@@ -4,10 +4,10 @@ import org.junit.Assert
 import org.junit.Test
 
 
-public class KotlinJunitTest {
+class KotlinJunitTest {
 
     @Test
-    public fun firstTest() {
+    fun firstTest() {
         Assert.assertTrue(1 == 1)
     }
 
