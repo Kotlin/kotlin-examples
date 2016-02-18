@@ -23,7 +23,7 @@ import com.example.dagger.kotlin.R
 import kotlinx.android.synthetic.main.activity_main.locationInfo
 import javax.inject.Inject
 
-public class HomeActivity : DemoActivity() {
+class HomeActivity : DemoActivity() {
     @Inject
     lateinit var locationManager: LocationManager
 

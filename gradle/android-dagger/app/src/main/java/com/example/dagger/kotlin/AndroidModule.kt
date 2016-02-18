@@ -26,8 +26,7 @@ import javax.inject.Singleton
  * A module for Android-specific dependencies which require a [Context] or
  * [android.app.Application] to create.
  */
-@Module
-public class AndroidModule(private val application: BaseApplication) {
+@Module class AndroidModule(private val application: BaseApplication) {
 
     /**
      * Allow the application context to be injected but require that it be annotated with

@@ -1,6 +1,6 @@
 package com.example.dagger.kotlin
 
-public class DemoApplication : BaseApplication() {
+class DemoApplication : BaseApplication() {
     lateinit var component: ApplicationComponent
 
     override fun onCreate() {
