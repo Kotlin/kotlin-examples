@@ -12,7 +12,7 @@ import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import butterknife.*
 
-public class SimpleActivity : Activity() {
+class SimpleActivity : Activity() {
 
     @Bind(R.id.title)
     lateinit var title: TextView

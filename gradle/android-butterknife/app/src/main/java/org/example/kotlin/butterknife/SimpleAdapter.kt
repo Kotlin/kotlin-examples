@@ -9,7 +9,7 @@ import android.widget.TextView
 import butterknife.ButterKnife
 import butterknife.Bind
 
-public class SimpleAdapter(context: Context) : BaseAdapter() {
+class SimpleAdapter(context: Context) : BaseAdapter() {
 
     private val inflater = LayoutInflater.from(context)
 
