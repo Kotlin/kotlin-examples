@@ -18,6 +18,6 @@ package io.realm.examples.kotlin.model
 
 import io.realm.RealmObject
 
-public open class Dog : RealmObject() {
-    public open var name: String = ""
+open class Dog : RealmObject() {
+    open var name: String = ""
 }

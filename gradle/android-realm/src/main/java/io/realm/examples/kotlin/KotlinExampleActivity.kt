@@ -28,7 +28,7 @@ import io.realm.examples.kotlin.model.Person
 import org.jetbrains.anko.*
 import kotlinx.android.synthetic.main.activity_realm_basic_example.*
 
-public class KotlinExampleActivity : Activity() {
+class KotlinExampleActivity : Activity() {
     private companion object {
         val TAG = KotlinExampleActivity::class.java.name
     }
