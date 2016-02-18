@@ -2,9 +2,9 @@ package mobi.porquenao.poc.kotlin.core
 
 import com.raizlabs.android.dbflow.sql.language.Select
 
-public object ItemRepository {
+object ItemRepository {
 
-    public fun getAll(): MutableList<Item> {
+    fun getAll(): MutableList<Item> {
         return Select()
                 .from(Item::class.java)
                 .where()

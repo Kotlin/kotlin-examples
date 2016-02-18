@@ -5,7 +5,7 @@ import java.util.*
 import com.raizlabs.android.dbflow.annotation.TypeConverter as TypeConverterAnnotation
 
 @TypeConverterAnnotation
-public class CalendarConverter : TypeConverter<Long, Calendar>() {
+class CalendarConverter : TypeConverter<Long, Calendar>() {
 
     override fun getDBValue(model: Calendar): Long? {
         return model.timeInMillis

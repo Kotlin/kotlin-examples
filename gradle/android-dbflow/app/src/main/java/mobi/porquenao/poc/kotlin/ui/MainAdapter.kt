@@ -12,7 +12,7 @@ import mobi.porquenao.poc.kotlin.core.Item
 import mobi.porquenao.poc.kotlin.core.ItemRepository
 import java.util.*
 
-public class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
     private val mItems: MutableList<Item>
     private val mOnClickListener: View.OnClickListener
@@ -51,14 +51,14 @@ public class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         return mItems.size
     }
 
-    public fun add() {
+    fun add() {
         val item = Item()
         mItems.add(0, item)
         item.save()
         notifyItemInserted(0)
     }
 
-    public class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val card = view.card
         val container = view.container
         val title = view.title

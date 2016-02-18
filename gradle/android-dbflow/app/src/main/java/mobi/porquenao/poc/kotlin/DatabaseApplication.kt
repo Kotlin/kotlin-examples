@@ -4,7 +4,7 @@ import android.app.Application
 
 import com.raizlabs.android.dbflow.config.FlowManager
 
-public class DatabaseApplication : Application() {
+class DatabaseApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()

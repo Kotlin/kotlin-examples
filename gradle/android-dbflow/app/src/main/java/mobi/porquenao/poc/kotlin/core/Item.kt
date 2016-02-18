@@ -7,13 +7,13 @@ import com.raizlabs.android.dbflow.structure.BaseModel
 import java.util.*
 
 @Table(tableName = "items", databaseName = AppDatabase.NAME)
-public class Item : BaseModel() {
+class Item : BaseModel() {
 
     @PrimaryKey(autoincrement = true)
     @Column(name = "id")
-    public var id: Long = 0
+    var id: Long = 0
 
     @Column(name = "updated_at")
-    public var updatedAt: Calendar = Calendar.getInstance()
+    var updatedAt: Calendar = Calendar.getInstance()
 
 }

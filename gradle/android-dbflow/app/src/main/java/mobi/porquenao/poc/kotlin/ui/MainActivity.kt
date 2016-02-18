@@ -7,7 +7,7 @@ import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 import mobi.porquenao.poc.kotlin.R
 
-public class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity() {
     lateinit var listAdapter: MainAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
