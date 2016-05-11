@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import butterknife.ButterKnife
-import butterknife.Bind
+import butterknife.BindView
 
 class SimpleAdapter(context: Context) : BaseAdapter() {
 
@@ -37,13 +37,13 @@ class SimpleAdapter(context: Context) : BaseAdapter() {
     }
 
     class ViewHolder(view: View) {
-        @Bind(R.id.word)
+        @BindView(R.id.word)
         lateinit var word: TextView
 
-        @Bind(R.id.length)
+        @BindView(R.id.length)
         lateinit var length: TextView
 
-        @Bind(R.id.position)
+        @BindView(R.id.position)
         lateinit var position: TextView
 
         init {

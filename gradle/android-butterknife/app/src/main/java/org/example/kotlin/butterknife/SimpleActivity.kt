@@ -14,22 +14,22 @@ import butterknife.*
 
 class SimpleActivity : Activity() {
 
-    @Bind(R.id.title)
+    @BindView(R.id.title)
     lateinit var title: TextView
 
-    @Bind(R.id.subtitle)
+    @BindView(R.id.subtitle)
     lateinit var subtitle: TextView
 
-    @Bind(R.id.hello)
+    @BindView(R.id.hello)
     lateinit var hello: Button
 
-    @Bind(R.id.list_of_things)
+    @BindView(R.id.list_of_things)
     lateinit var listOfThings: ListView
 
-    @Bind(R.id.footer)
+    @BindView(R.id.footer)
     lateinit var footer: TextView
 
-    @Bind(R.id.title, R.id.subtitle, R.id.hello)
+    @BindViews(R.id.title, R.id.subtitle, R.id.hello)
     lateinit var headerViews: MutableList<View>
 
     @JvmField
