@@ -8,7 +8,7 @@ object ItemRepository {
         return Select()
                 .from(Item::class.java)
                 .where()
-                .orderBy(false, Item_Table.UPDATED_AT)
+                .orderBy(Item_Table.updated_at, false)
                 .queryList()
     }
 

@@ -6,7 +6,7 @@ import com.raizlabs.android.dbflow.annotation.Table
 import com.raizlabs.android.dbflow.structure.BaseModel
 import java.util.*
 
-@Table(tableName = "items", databaseName = AppDatabase.NAME)
+@Table(name = "items", database = AppDatabase::class)
 class Item : BaseModel() {
 
     @PrimaryKey(autoincrement = true)
