@@ -6,7 +6,7 @@ import android.app.Activity
 import android.view.Menu
 import android.widget.Button
 
-open class KotlinActivity : Activity() {
+class KotlinActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
