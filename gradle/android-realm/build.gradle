@@ -4,17 +4,22 @@ buildscript {
 
     repositories {
         jcenter()
+        maven {
+            url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
+        }
     }
 
     dependencies {
         classpath 'com.android.tools.build:gradle:2.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "io.realm:realm-gradle-plugin:$realm_version"
     }
 }
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 23
@@ -39,17 +44,15 @@ android {
 }
 
 repositories {
+    jcenter()
     maven {
         url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
     }
-    jcenter()
 }
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    compile "io.realm:realm-android:$realm_version"
     compile 'org.jetbrains.anko:anko-common:0.8.2'
-    kapt "io.realm:realm-android:$realm_version"
 }
 
 kapt {

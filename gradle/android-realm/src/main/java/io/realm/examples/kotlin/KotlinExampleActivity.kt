@@ -21,6 +21,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import io.realm.Realm
+import io.realm.RealmConfiguration
 import io.realm.Sort
 import io.realm.examples.kotlin.model.Cat
 import io.realm.examples.kotlin.model.Dog
@@ -42,7 +43,7 @@ class KotlinExampleActivity : Activity() {
         // This example uses Kotlin Android Extensions plugin
         container.removeAllViews()
 
-        realm = Realm.getInstance(this)
+        realm = Realm.getInstance(RealmConfiguration.Builder(this).build())
         with (realm) {
             // These operations are small enough that we can safely run them on the UI thread
             basicCRUD()
