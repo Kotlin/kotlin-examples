@@ -1,14 +1,17 @@
 buildscript {
-    ext.kotlin_version = '1.0.0'
+    ext.kotlin_version = '1.0.2'
 
     repositories {
         mavenCentral()
         jcenter()
+        maven {
+            url 'https://dl.bintray.com/kotlin/kotlin-eap'
+        }
     }
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.7"
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.8"
     }
 }
 
@@ -19,11 +22,14 @@ sourceCompatibility = 1.5
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://dl.bintray.com/kotlin/kotlin-eap'
+    }
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:1.0.1"
 }
 sourceSets {
     main.java.srcDirs += 'src/main/kotlin'
