@@ -55,9 +55,19 @@
                         <phase>pre-site</phase>
                         <goals>
                             <goal>dokka</goal>
+                            <goal>javadoc</goal>
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <sourceLinks>
+                        <link>
+                            <dir>${project.basedir}</dir>
+                            <url>https://github.com/JetBrains/kotlin-examples/blob/master/maven/dokka-maven-example</url>
+                            <urlSuffix>#L</urlSuffix>
+                        </link>
+                    </sourceLinks>
+                </configuration>
             </plugin>
         </plugins>
     </build>
