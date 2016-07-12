@@ -8,8 +8,8 @@
     <artifactId>kotlin-maven-example</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <kotlin.version>1.0.1-2</kotlin.version>
-        <dokka.version>0.9.8</dokka.version>
+        <kotlin.version>1.0.3</kotlin.version>
+        <dokka.version>0.9.9</dokka.version>
     </properties>
 
     <dependencies>
@@ -60,6 +60,9 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <includes>
+                        <include>Module.md</include>
+                    </includes>
                     <sourceLinks>
                         <link>
                             <dir>${project.basedir}</dir>
