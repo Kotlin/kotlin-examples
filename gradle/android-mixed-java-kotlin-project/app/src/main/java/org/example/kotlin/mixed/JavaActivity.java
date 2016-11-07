@@ -7,8 +7,6 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-import org.example.kotlin.mixed.KotlinActivity;
-
 public class JavaActivity extends Activity {
 
     @Override

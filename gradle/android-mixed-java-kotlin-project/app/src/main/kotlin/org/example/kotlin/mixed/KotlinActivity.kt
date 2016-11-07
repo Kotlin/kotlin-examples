@@ -12,7 +12,7 @@ class KotlinActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        var next = findViewById(R.id.Button02) as Button
+        val next = findViewById(R.id.Button02) as Button
         next.setOnClickListener {
             val intent: Intent = Intent()
             setResult(RESULT_OK, intent)
