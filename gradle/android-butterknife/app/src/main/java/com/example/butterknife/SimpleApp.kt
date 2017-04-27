@@ -1,4 +1,4 @@
-package org.example.kotlin.butterknife
+package com.example.butterknife
 
 import android.app.Application
 import butterknife.ButterKnife
