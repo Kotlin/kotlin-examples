@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Realm Inc.
+ * Copyright 2016 Realm Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,10 +14,17 @@
  * limitations under the License.
  */
 
-package io.realm.examples.kotlin.model
+package io.realm.examples.kotlin
 
-import io.realm.RealmObject
+import android.app.Application
 
-open class Cat : RealmObject() {
-    open var name: String = ""
+import io.realm.Realm
+
+class MyApplication : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+        // Initialize Realm. Should only be done once when the application starts.
+        Realm.init(this)
+    }
 }
