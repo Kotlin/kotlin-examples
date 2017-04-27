@@ -32,7 +32,7 @@ class HomeActivity : DemoActivity() {
         setContentView(R.layout.activity_main)
         (application as DemoApplication).component.inject(this)
 
-        // TODO do something with the injected dependencies here!
+        // TODO Do something with the injected dependencies here
         locationInfo.text = "Injected LocationManager:\n$locationManager"
     }
 }
