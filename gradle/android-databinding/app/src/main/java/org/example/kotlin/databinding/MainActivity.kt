@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         binding.data = weather
     }
 
-    fun change(view: View) {
+    fun changeTemperatureAndImage(view: View) {
         ++counter
         weather.temperature = "$counter °C"
         weather.imageUrl = "http://loremflickr.com/800/600/city?random=$counter"
@@ -34,6 +34,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startActivity(view: View) {
-        startActivity(Intent(this, SecondActivity::class.java))
+        startActivity(Intent(this, OtherActivity::class.java))
     }
 }

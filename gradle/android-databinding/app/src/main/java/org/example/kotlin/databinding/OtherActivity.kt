@@ -10,7 +10,7 @@ import android.view.LayoutInflater
 import android.databinding.DataBindingUtil
 
 
-class SecondActivity : AppCompatActivity() {
+class OtherActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

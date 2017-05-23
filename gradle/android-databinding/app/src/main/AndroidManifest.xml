@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="org.example.kotlin.databinding.SecondActivity" />
+        <activity android:name="org.example.kotlin.databinding.OtherActivity" />
     </application>
 
 </manifest>

@@ -26,13 +26,13 @@
             android:text="@string/change"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="change" />
+            android:onClick="changeTemperatureAndImage" />
 
         <Button
             android:text="@string/next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="startActivity" />
+            android:onClick="startOtherActivity" />
 
     </LinearLayout>
 </layout>
