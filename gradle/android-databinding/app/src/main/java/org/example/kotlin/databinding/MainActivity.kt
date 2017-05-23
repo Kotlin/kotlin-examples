@@ -1,11 +1,11 @@
 package org.example.kotlin.databinding
 
-import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import org.example.kotlin.databinding.databinding.ActivityMainBinding
+import org.jetbrains.anko.startActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -33,7 +33,5 @@ class MainActivity : AppCompatActivity() {
         weather.notifyChange()
     }
 
-    fun startActivity(view: View) {
-        startActivity(Intent(this, OtherActivity::class.java))
-    }
+    fun startActivity(view: View) = startActivity<OtherActivity>()
 }

@@ -30,12 +30,17 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
-    testCompile 'junit:junit:4.12'
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
     compile "com.android.support:recyclerview-v7:25.3.1"
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
     kapt "com.android.databinding:compiler:$android_plugin_version"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile "org.jetbrains.anko:anko-sdk25:$anko_version"
+    compile "org.jetbrains.anko:anko-appcompat-v7-common:$anko_version"
+
+    testCompile 'junit:junit:4.12'
 }
 repositories {
     mavenCentral()
