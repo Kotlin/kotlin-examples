@@ -5,11 +5,13 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'org.akhikhl.gretty:gretty:+'
     }
 }
 
 apply plugin: 'kotlin'
 apply plugin: 'war'
+apply plugin: 'org.akhikhl.gretty'
 
 repositories {
     jcenter()
@@ -31,4 +33,9 @@ sourceSets {
             srcDir "test/main/kotlin"
         }
     }
+}
+
+gretty {
+    contextPath = '/'
+    servletContainer = 'jetty9'
 }
