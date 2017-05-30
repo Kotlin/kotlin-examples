@@ -1,0 +1,18 @@
+language: java
+
+jdk:
+    - oraclejdk8
+    - oraclejdk7
+    - openjdk7
+    - openjdk6
+script:
+    - cd maven && mvn verify
+    - cd ../gradle/android-butterknife && ./gradlew test
+    - cd ../../gradle/android-dagger && ./gradlew test
+    - cd ../../gradle/android-dbflow && ./gradlew test
+    - cd ../../gradle/android-junit-test && ./gradlew test
+    - cd ../../gradle/android-mixed-java-kotlin-project && ./gradlew test
+    - cd ../../gradle/android-realm && ./gradlew test
+    - cd ../../gradle/dokka-gradle-example && ./gradlew test
+    - cd ../../gradle/hello-world && ./gradlew test
+    - cd ../../gradle/mixed-java-kotlin-hello-world && ./gradlew test
