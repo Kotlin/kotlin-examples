@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         override fun doInBackground(vararg params: Unit?): String? {
             val networkClient = NetworkClient()
             val stream = BufferedInputStream(
-                    networkClient.get("https://raw.githubusercontent.com/irontec/android-kotlin-samples/master/common-data/bilbao.json"))
+                    networkClient.get("https://raw.githubusercontent.com/JetBrains/kotlin-examples/master/common-data/bilbao.json"))
             return readStream(stream)
         }
 

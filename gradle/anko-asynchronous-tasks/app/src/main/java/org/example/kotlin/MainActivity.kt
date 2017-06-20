@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                         // Heavy duty work made on the background
                         val networkClient = NetworkClient()
                         val stream = BufferedInputStream(
-                                networkClient.get("https://raw.githubusercontent.com/irontec/android-kotlin-samples/master/common-data/bilbao.json"))
+                                networkClient.get("https://raw.githubusercontent.com/JetBrains/kotlin-examples/master/common-data/bilbao.json"))
                         val bufferedReader = BufferedReader(InputStreamReader(stream));
                         val stringBuilder = StringBuilder()
                         bufferedReader.forEachLine { stringBuilder.append(it) }

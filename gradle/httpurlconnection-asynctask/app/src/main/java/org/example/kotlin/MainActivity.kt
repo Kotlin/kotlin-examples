@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         val innerTextView: TextView? = textView
 
         override fun doInBackground(vararg params: Unit?): String? {
-            val url = URL("https://raw.githubusercontent.com/irontec/android-kotlin-samples/master/common-data/bilbao.json")
+            val url = URL("https://raw.githubusercontent.com/JetBrains/kotlin-examples/master/common-data/bilbao.json")
             val httpClient = url.openConnection() as HttpURLConnection
             if (httpClient.responseCode == HttpURLConnection.HTTP_OK) {
                 try {
