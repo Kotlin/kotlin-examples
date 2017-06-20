@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="anko-sdk15-0.9.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-sdk15/0.9.1/cd75e456277ed865a5ab936e011e8df6cc935c0d/anko-sdk15-0.9.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-sdk15/0.9.1/37e9997d40a124d2cc19c8f08bea012d7694d58/anko-sdk15-0.9.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
