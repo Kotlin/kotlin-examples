@@ -45,7 +45,7 @@ task installJest(type: NpmTask) {
 
 task runJest(type: NodeTask, dependsOn: [compileTestKotlin2Js, populateNodeModules, installJest]) {
     script = file('node_modules/.bin/jest')
-    args = ['--testRegex=_test\\.js\$', compileTestKotlin2Js.outputFile]
+    args = [compileTestKotlin2Js.outputFile]
 }
 
 test.dependsOn runJest

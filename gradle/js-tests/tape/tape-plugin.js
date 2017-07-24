@@ -1,9 +1,5 @@
-var paths = require('app-module-path');
-paths.addPath('build/node_modules');
-paths.addPath('build/classes/main');
-
 var tape = require('tape');
-var kotlin_test = require('kotlin-test');
+var kotlin_test = require('./build/node_modules/kotlin-test.js');
 
 var suiteContext = {
     test: tape

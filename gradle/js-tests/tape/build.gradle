@@ -26,6 +26,8 @@ dependencies {
 }
 
 task populateNodeModules(type: Copy) {
+   from compileKotlin2Js.destinationDir
+
    configurations.testCompile.each { from zipTree(it.absolutePath) }
    include '*.js'
    into "${buildDir}/node_modules"
@@ -35,6 +37,13 @@ node {
   download = true
 }
 
-npm_test.dependsOn([compileTestKotlin2Js, populateNodeModules, npm_install])
+task installTape(type: NpmTask) {
+    args = ['install', 'tape']
+}
 
-test.dependsOn npm_test
+task testTape(type: NodeTask, dependsOn: [compileTestKotlin2Js, populateNodeModules, installTape]) {
+  script = file('node_modules/.bin/tape')
+  args = ['tape-plugin.js', compileTestKotlin2Js.outputFile]
+}
+
+test.dependsOn testTape

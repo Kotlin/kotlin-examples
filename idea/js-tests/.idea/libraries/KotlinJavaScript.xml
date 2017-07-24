@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="KotlinJavaScript">
+    <CLASSES>
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-js.jar!/" />
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-test-js.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-js-sources.jar!/" />
+      <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-test-js-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

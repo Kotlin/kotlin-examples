@@ -1,9 +1,0 @@
-{
-  "scripts": {
-    "test": "tape tape-plugin.js build/classes/test/tape_test.js"
-  },
-  "devDependencies": {
-    "app-module-path": "^2.2.0",
-    "tape": "^4.7.0"
-  }
-}
