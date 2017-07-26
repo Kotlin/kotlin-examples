@@ -5,7 +5,7 @@
     <working-directory>$PROJECT_DIR$</working-directory>
     <pass-parent-env>true</pass-parent-env>
     <envs>
-      <env name="NODE_PATH" value="out/production/js-tests:out/production/js-tests/lib" />
+      <env name="NODE_PATH" value="out/production/js-tests:out/test/js-tests/lib" />
     </envs>
     <ui>bdd</ui>
     <extra-mocha-options />
