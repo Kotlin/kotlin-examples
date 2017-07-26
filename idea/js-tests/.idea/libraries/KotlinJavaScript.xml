@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="KotlinJavaScript">
+  <library name="KotlinJavaScript" type="kotlin.js">
     <CLASSES>
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-js.jar!/" />
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-test-js.jar!/" />
