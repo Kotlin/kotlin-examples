@@ -1,8 +1,7 @@
 buildscript {
-    ext.kotlin_version = '1.1.4-eap-33'
+    ext.kotlin_version = '1.1.4'
 
     repositories {
-        maven { url 'http://dl.bintray.com/kotlin/kotlin-eap-1.1' }
         maven { url "https://plugins.gradle.org/m2/" }
         mavenCentral()
     }
@@ -21,7 +20,6 @@ node {
 }
 
 repositories {
-    maven { url 'http://dl.bintray.com/kotlin/kotlin-eap-1.1' }
     mavenCentral()
 }
 
