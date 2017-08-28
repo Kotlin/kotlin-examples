@@ -1,7 +1,7 @@
 package org.example.kotlin.networking
 
-import com.squareup.okhttp.OkHttpClient
-import com.squareup.okhttp.Request
+import okhttp3.OkHttpClient
+import okhttp3.Request
 import java.io.InputStream
 
 /**
@@ -15,7 +15,7 @@ open class NetworkClient {
         val body = response.body()
         // body.toString() returns a string representing the object and not the body itself, probably
         // kotlins fault when using third party libraries. Use byteStream() and convert it to a String
-        return body.byteStream()
+        return body!!.byteStream()
     }
 
 }

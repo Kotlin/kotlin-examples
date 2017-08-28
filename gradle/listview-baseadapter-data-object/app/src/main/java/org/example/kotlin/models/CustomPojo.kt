@@ -10,5 +10,4 @@ open class CustomPojo (var name: String) {
         println("Customer initialized with value ${name}")
     }
 
-    override fun toString() = "$name"
 }

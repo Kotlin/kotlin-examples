@@ -8,9 +8,8 @@ import com.google.gson.GsonBuilder
 import org.example.kotlin.deserializers.WeatherDeserializer
 import org.example.kotlin.models.WeatherObject
 import org.example.kotlin.networking.NetworkClient
-
-
 import org.jetbrains.anko.*
+import org.jetbrains.anko.sdk25.coroutines.onClick
 import java.io.BufferedInputStream
 import java.io.BufferedReader
 import java.io.InputStreamReader
