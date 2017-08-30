@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "build": "./gradlew build",
+    "test": "jest"
+  },
+  "jest": {
+    "automock": false,
+    "testRegex": "_test\\.js$",
+    "moduleDirectories": [
+      "./build/classes/kotlin/main/",
+      "./build/classes/kotlin/main/dependencies/",
+      "./node_modules"
+    ],
+    "testPathIgnorePatterns": [
+      "test/kodando.*\\.js$"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^20.0.4"
+  }
+}
