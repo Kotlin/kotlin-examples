@@ -1,5 +1,5 @@
 buildscript {
-  ext.kotlin_version = '1.0.0'
+  ext.kotlin_version = '1.1.4-3'
   repositories {
     mavenCentral()
   }
@@ -30,5 +30,5 @@ dependencies {
 test.testClassesDir = project.tasks.compileTestKotlin.destinationDir
 
 task wrapper(type: Wrapper) {
-  gradleVersion="2.7"
+  gradleVersion="4.1"
 }
