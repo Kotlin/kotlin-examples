@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+    <persistence-unit name="unit">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>ru.trylogic.querydsl.example.User</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:"/>
+            <property name="connection.jdbc.driver" value="org.h2.Driver"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="javax.persistence.jdbc.user" value="sa" />
+            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="hibernate.hbm2ddl.auto" value="create" />
+        </properties>
+    </persistence-unit>
+</persistence>
