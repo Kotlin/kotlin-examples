@@ -45,7 +45,7 @@ open class CustomListAdapter(data: Array<CustomPojo>, context: Context) : BaseAd
             view = convertView
             vh = view.tag as ListRowHolder
         }
-        vh.label.text = localData.get(index = position).toString()
+        vh.label.text = localData.get(index = position).name
         return view
     }
 
@@ -54,7 +54,7 @@ open class CustomListAdapter(data: Array<CustomPojo>, context: Context) : BaseAd
         val label: TextView
 
         init {
-            this.label = row?.findViewById(R.id.label) as TextView
+            this.label = row?.findViewById<TextView>(R.id.label) as TextView
         }
     }
 
