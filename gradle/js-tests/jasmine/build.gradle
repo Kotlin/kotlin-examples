@@ -44,7 +44,7 @@ task installJasmine(type: NpmTask) {
 }
 
 task runJasmine(type: NodeTask, dependsOn: [compileTestKotlin2Js, populateNodeModules, installJasmine]) {
-    script = file('node_modules/.bin/jasmine')
+    script = file('node_modules/jasmine/bin/jasmine.js')
     args = [compileTestKotlin2Js.outputFile]
 }
 

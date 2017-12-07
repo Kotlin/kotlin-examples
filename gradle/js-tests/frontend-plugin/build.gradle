@@ -6,7 +6,7 @@ buildscript {
     }
     dependencies {
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.1.4-eap-33'
-        classpath "org.jetbrains.kotlin:kotlin-frontend-plugin:0.0.19"
+        classpath "org.jetbrains.kotlin:kotlin-frontend-plugin:0.0.26"
     }
 }
 
@@ -24,6 +24,8 @@ dependencies {
 }
 
 kotlinFrontend {
+    downloadNodeJsVersion = "latest"
+
     npm {
         devDependency("karma")
     }
