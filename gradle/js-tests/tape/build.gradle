@@ -42,7 +42,7 @@ task installTape(type: NpmTask) {
 }
 
 task testTape(type: NodeTask, dependsOn: [compileTestKotlin2Js, populateNodeModules, installTape]) {
-  script = file('node_modules/.bin/tape')
+  script = file('node_modules/tape/bin/tape')
   args = ['tape-plugin.js', compileTestKotlin2Js.outputFile]
 }
 
