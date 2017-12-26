@@ -47,15 +47,11 @@ class MainActivity : AppCompatActivity() {
             return null
         }
 
-        fun readStream(inputStream: BufferedInputStream): String {
+        private fun readStream(inputStream: BufferedInputStream): String {
             val bufferedReader = BufferedReader(InputStreamReader(inputStream))
             val stringBuilder = StringBuilder()
             bufferedReader.forEachLine { stringBuilder.append(it) }
             return stringBuilder.toString()
-        }
-
-        override fun onPreExecute() {
-            super.onPreExecute()
         }
 
         override fun onPostExecute(result: String?) {
