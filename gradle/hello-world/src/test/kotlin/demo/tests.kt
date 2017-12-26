@@ -1,10 +1,10 @@
 package demo 
 
 import kotlin.test.assertEquals
-import org.junit.Test as test
+import org.junit.Test
 
 class TestSource {
-    test fun f() {
+    @Test fun f() {
         assertEquals("Hello, world!", getGreeting())
     }
 }

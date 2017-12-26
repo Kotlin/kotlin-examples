@@ -1,6 +1,6 @@
 package hello
 
-public fun getHelloString() : String {
+fun getHelloString() : String {
     return "Hello, world!"
 }
 

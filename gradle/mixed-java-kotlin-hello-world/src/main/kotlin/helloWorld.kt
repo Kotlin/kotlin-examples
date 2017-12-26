@@ -1,7 +1,6 @@
 package demo
 
-import com.google.common.base.Joiner
-import java.util.ArrayList
+import java.util.*
 
 class KotlinGreetingJoiner(val greeter: Greeter) {
 
@@ -12,7 +11,6 @@ class KotlinGreetingJoiner(val greeter: Greeter) {
     }
 
     fun getJoinedGreeting(): String {
-        val joiner = Joiner.on(" and ").skipNulls()
-        return "${greeter.getGreeting()} ${joiner.join(names)}"
+        return "${greeter.getGreeting()} ${names.filterNotNull().joinToString(separator = " and ")}"
     }
 }
