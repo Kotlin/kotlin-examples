@@ -1,10 +1,9 @@
 buildscript {
     repositories {
-        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap-1.1' }
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.1.4-eap-33'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.20'
         classpath 'com.moowork.gradle:gradle-node-plugin:1.2.0'
     }
 }
@@ -13,7 +12,7 @@ apply plugin: 'kotlin2js'
 apply plugin: 'com.moowork.node'
 
 repositories {
-    maven { url 'https://dl.bintray.com/kotlin/kotlin-eap-1.1' }
+    jcenter()
 }
 
 dependencies {
