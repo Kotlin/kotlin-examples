@@ -3,6 +3,9 @@
     "test": "./gradlew test"
   },
   "jest": {
-     "testRegex": "_test\\.js$"
+    "testRegex": "_test\\.js$"
+  },
+  "dependencies": {
+    "jest": "^23.0.1"
   }
 }

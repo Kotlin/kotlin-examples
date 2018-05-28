@@ -4,12 +4,12 @@ buildscript {
     }
     dependencies {
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.20'
-        classpath 'com.moowork.gradle:gradle-node-plugin:1.2.0'
+        classpath 'gradle.plugin.de.solugo.gradle:gradle-nodejs-plugin:0.2.1'
     }
 }
 
 apply plugin: 'kotlin2js'
-apply plugin: 'com.moowork.node'
+apply plugin: 'de.solugo.gradle.nodejs'
 
 repositories {
     jcenter()
@@ -24,25 +24,20 @@ dependencies {
     kotlinOptions.moduleKind = "commonjs"
 }
 
-task populateNodeModules(type: Copy) {
+task populateNodeModules(type: Copy, dependsOn: compileKotlin2Js) {
    from compileKotlin2Js.destinationDir
 
-   configurations.testCompile.each { from zipTree(it.absolutePath) }
-   include '*.js'
+   configurations.testCompile.each {
+       from zipTree(it.absolutePath).matching { include '*.js' }
+   }
+
    into "${buildDir}/node_modules"
 }
 
-node { 
-  download = true
-}
-
-task installTape(type: NpmTask) {
-    args = ['install', 'tape']
-}
-
-task testTape(type: NodeTask, dependsOn: [compileTestKotlin2Js, populateNodeModules, installTape]) {
-  script = file('node_modules/tape/bin/tape')
-  args = ['tape-plugin.js', compileTestKotlin2Js.outputFile]
+task("testTape", type: NodeJsTask, dependsOn: [compileTestKotlin2Js, populateNodeModules]) {
+    require = ["tape"]
+    executable = "node_modules/tape/bin/tape"
+    args = ['tape-plugin.js', projectDir.toPath().relativize(file(compileTestKotlin2Js.outputFile).toPath())]
 }
 
 test.dependsOn testTape

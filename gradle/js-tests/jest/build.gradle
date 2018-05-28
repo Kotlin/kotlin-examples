@@ -4,12 +4,12 @@ buildscript {
     }
     dependencies {
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.20'
-        classpath 'com.moowork.gradle:gradle-node-plugin:1.2.0'
+        classpath 'gradle.plugin.de.solugo.gradle:gradle-nodejs-plugin:0.2.1'
     }
 }
 
 apply plugin: 'kotlin2js'
-apply plugin: 'com.moowork.node'
+apply plugin: 'de.solugo.gradle.nodejs'
 
 repositories {
     jcenter()
@@ -34,17 +34,10 @@ task populateNodeModules(type: Copy, dependsOn: compileKotlin2Js) {
    into "${buildDir}/node_modules"
 }
 
-node { 
-  download = true
-}
-
-task installJest(type: NpmTask) {
-    args = ['install', 'jest']
-}
-
-task runJest(type: NodeTask, dependsOn: [compileTestKotlin2Js, populateNodeModules, installJest]) {
-    script = file('node_modules/jest/bin/jest.js')
-    args = [projectDir.toURI().relativize(compileTestKotlin2Js.outputFile.toURI())]
+task runJest(type: NodeJsTask, dependsOn: [compileTestKotlin2Js, populateNodeModules]) {
+    require = ["jest"]
+    executable = "node_modules/jest/bin/jest.js"
+    args = [projectDir.toPath().relativize(file(compileTestKotlin2Js.outputFile).toPath())]
 }
 
 test.dependsOn runJest
