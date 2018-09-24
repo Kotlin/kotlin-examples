@@ -1,8 +1,8 @@
 package com.jetbrains.jonnyzzz.common
 
+expect fun platformName(): String
 
 fun createApplicationScreenMessage() : String {
-  return "This is common application message"
+  return "Kotlin Rocks on ${platformName()}"
 }
-
 
