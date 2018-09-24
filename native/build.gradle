@@ -1,0 +1,14 @@
+apply plugin: 'kotlin-platform-native'
+
+dependencies {
+    expectedBy project(':common')
+}
+
+sourceSets {
+    main {
+        component {
+            targets = ['macos_x64']
+        }
+    }
+}
+
