@@ -1,4 +1,23 @@
-//apply plugin: 'kotlin-multiplatform'
-apply plugin: 'java'
+apply plugin: 'kotlin-multiplatform'
 
+
+kotlin {
+    targets {
+        fromPreset(presets.jvm, 'jvm6')
+    }
+
+    sourceSets {
+        commonMain {
+            dependencies {
+                api 'org.jetbrains.kotlin:kotlin-stdlib-common'
+            }
+        }
+
+        jvm6Main { // `jvm6Main` is automatically created for the `main` compilation of the target `jvm6`
+            dependencies {
+                api 'org.jetbrains.kotlin:kotlin-stdlib'
+            }
+        }
+    }
+}
 
