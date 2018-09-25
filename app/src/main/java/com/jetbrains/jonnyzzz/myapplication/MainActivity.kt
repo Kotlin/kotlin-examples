@@ -3,7 +3,7 @@ package com.jetbrains.jonnyzzz.myapplication
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-//import com.jetbrains.jonnyzzz.common.createApplicationScreenMessage
+import com.jetbrains.jonnyzzz.common.createApplicationScreenMessage
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,6 +11,6 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-//    findViewById<TextView>(R.id.main_text).text = createApplicationScreenMessage()
+    findViewById<TextView>(R.id.main_text).text = createApplicationScreenMessage()
   }
 }
