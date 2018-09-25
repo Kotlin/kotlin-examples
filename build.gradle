@@ -10,7 +10,7 @@ buildscript {
         maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.android.tools.build:gradle:3.2.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:$kotlin_native_version"
 
