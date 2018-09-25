@@ -1,4 +1,4 @@
-apply plugin: 'kotlin-multiplatform'
-
+//apply plugin: 'kotlin-multiplatform'
+apply plugin: 'java'
 
 

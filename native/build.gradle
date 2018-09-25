@@ -1,4 +1,5 @@
-apply plugin: 'kotlin-platform-native'
+//apply plugin: 'kotlin-platform-native'
+/*
 
 dependencies {
     expectedBy project(':common')
@@ -12,3 +13,4 @@ sourceSets {
     }
 }
 
+*/
