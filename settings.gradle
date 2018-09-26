@@ -1,3 +1,2 @@
 include ':app'
 include ':common'
-include ':native'
