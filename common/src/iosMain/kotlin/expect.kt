@@ -1,9 +1,14 @@
 package com.jetbrains.jonnyzzz.common
 
-
-//https://stackoverflow.com/questions/11072804/how-do-i-determine-the-os-version-at-runtime-in-os-x-or-ios-without-using-gesta
-
+import platform.UIKit.UIDevice
 
 actual fun platformName(): String {
-  return "iOS"
+
+  return UIDevice.currentDevice.systemName() +
+          " " +
+          UIDevice.currentDevice.systemVersion
 }
+
+
+
+//https://stackoverflow.com/a/24505884
