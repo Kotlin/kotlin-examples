@@ -2,36 +2,27 @@ apply plugin: 'kotlin-multiplatform'
 
 kotlin {
     targets {
-        fromPreset(presets.jvm, 'jvm6')
+        fromPreset(presets.jvm, 'android')
 
-        fromPreset(presets.iosX64, 'iosX64')
-        fromPreset(presets.iosArm64, 'iosArm64')
+        fromPreset(presets.iosArm64, 'iOS') {
+            compilations.main.outputKinds('FRAMEWORK')
+        }
 
-        configure([iosX64, iosX64]) {
+        fromPreset(presets.iosX64, 'iOSx64') {
             compilations.main.outputKinds('FRAMEWORK')
         }
     }
 
     sourceSets {
-        commonMain {
-            dependencies {
-                api 'org.jetbrains.kotlin:kotlin-stdlib-common'
-            }
+        commonMain.dependencies {
+            api 'org.jetbrains.kotlin:kotlin-stdlib-common'
         }
 
-        jvm6Main {
-            dependencies {
-                api 'org.jetbrains.kotlin:kotlin-stdlib'
-            }
+        androidMain.dependencies {
+            api 'org.jetbrains.kotlin:kotlin-stdlib'
         }
 
-        iosMain {
-            dependsOn commonMain
-        }
-
-        configure([iosX64Main, iosArm64Main]) {
-            dependsOn iosMain
-        }
+        iOSx64Main.dependsOn iOSMain
     }
 }
 
