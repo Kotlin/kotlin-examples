@@ -1,6 +1,5 @@
 apply plugin: 'kotlin-multiplatform'
 
-
 kotlin {
     targets {
         fromPreset(presets.jvm, 'jvm6')
@@ -20,7 +19,6 @@ kotlin {
         }
     }
 }
-
 
 configurations {
     compileClasspath
