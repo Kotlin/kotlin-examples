@@ -3,6 +3,13 @@ apply plugin: 'kotlin-multiplatform'
 kotlin {
     targets {
         fromPreset(presets.jvm, 'jvm6')
+
+        fromPreset(presets.iosX64, 'iosX64')
+        fromPreset(presets.iosArm64, 'iosArm64')
+
+        configure([iosX64, iosX64]) {
+            compilations.main.outputKinds('FRAMEWORK')
+        }
     }
 
     sourceSets {
@@ -16,6 +23,14 @@ kotlin {
             dependencies {
                 api 'org.jetbrains.kotlin:kotlin-stdlib'
             }
+        }
+
+        iosMain {
+            dependsOn commonMain
+        }
+
+        configure([iosX64Main, iosArm64Main]) {
+            dependsOn iosMain
         }
     }
 }
