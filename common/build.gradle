@@ -13,7 +13,7 @@ kotlin {
             }
         }
 
-        jvm6Main { // `jvm6Main` is automatically created for the `main` compilation of the target `jvm6`
+        jvm6Main {
             dependencies {
                 api 'org.jetbrains.kotlin:kotlin-stdlib'
             }
