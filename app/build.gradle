@@ -23,7 +23,7 @@ android {
 }
 
 dependencies {
-    implementation project(':common')
+    implementation project(':SharedCode')
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
