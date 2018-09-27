@@ -42,6 +42,13 @@ task packForXCode(type: Sync) {
 
     from { kotlin.targets."$target".compilations.main.getBinary("FRAMEWORK", mode).parentFile }
     into frameworkDir
+
+    doLast {
+        new File(frameworkDir, 'build.sh').with {
+            text = "#!/bin/bash\nexport 'JAVA_HOME=${System.getProperty("java.home")}'\ncd '${rootProject.rootDir}'\n./gradlew \$@\n"
+            setExecutable(true)
+        }
+    }
 }
 
 tasks.build.dependsOn packForXCode
