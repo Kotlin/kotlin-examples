@@ -29,3 +29,25 @@ kotlin {
 configurations {
     compileClasspath
 }
+
+task packForXCode(type: Sync) {
+    final File frameworkDir = new File(buildDir, "xcode-frameworks")
+    final String mode = System.getenv('CONFIGURATION')?.toUpperCase() ?: 'DEBUG'
+    final String target = System.getenv('SDK_NAME')?.startsWith("iphoneos") ? 'iOS' : 'iOSx64'
+
+    inputs.property "target", target
+    inputs.property "mode", mode
+    outputs.dir frameworkDir
+    dependsOn kotlin.targets."$target".compilations.main.linkTaskName("FRAMEWORK", mode)
+
+    from { kotlin.targets."$target".compilations.main.getBinary("FRAMEWORK", mode).parentFile }
+    into frameworkDir
+
+    doLast {
+        new TreeMap(System.getenv()).forEach { k,v ->
+            println "  $k=$v"
+        }
+    }
+}
+
+tasks.build.dependsOn packForXCode
