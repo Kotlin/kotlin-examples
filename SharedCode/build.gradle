@@ -42,12 +42,6 @@ task packForXCode(type: Sync) {
 
     from { kotlin.targets."$target".compilations.main.getBinary("FRAMEWORK", mode).parentFile }
     into frameworkDir
-
-    doLast {
-        new TreeMap(System.getenv()).forEach { k,v ->
-            println "  $k=$v"
-        }
-    }
 }
 
 tasks.build.dependsOn packForXCode
