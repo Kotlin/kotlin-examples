@@ -37,7 +37,6 @@ task packForXCode(type: Sync) {
 
     inputs.property "target", target
     inputs.property "mode", mode
-    outputs.dir frameworkDir
     dependsOn kotlin.targets."$target".compilations.main.linkTaskName("FRAMEWORK", mode)
 
     from { kotlin.targets."$target".compilations.main.getBinary("FRAMEWORK", mode).parentFile }
