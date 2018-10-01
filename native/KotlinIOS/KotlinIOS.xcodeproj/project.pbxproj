@@ -327,7 +327,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PV33WZUX7H;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "/Users/jonnyzzz/Work/kotlin-mpp-mobile/SharedCode/build/xcode-frameworks";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../SharedCode/build/xcode-frameworks";
 				INFOPLIST_FILE = KotlinIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -348,7 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PV33WZUX7H;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "/Users/jonnyzzz/Work/kotlin-mpp-mobile/SharedCode/build/xcode-frameworks";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../SharedCode/build/xcode-frameworks";
 				INFOPLIST_FILE = KotlinIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
