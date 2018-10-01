@@ -3,8 +3,8 @@ apply plugin: 'kotlin-multiplatform'
 
 kotlin {
     targets {
-        def iOSTarget = System.getenv('SDK_NAME')?.startsWith("iphoneos") \
-                        ? presets.iosArm64 : presets.iosX64
+        final def iOSTarget = System.getenv('SDK_NAME')?.startsWith("iphoneos") \
+                              ? presets.iosArm64 : presets.iosX64
 
         fromPreset(iOSTarget, 'iOS') {
             compilations.main.outputKinds('FRAMEWORK')
