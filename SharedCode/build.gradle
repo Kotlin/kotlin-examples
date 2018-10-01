@@ -1,16 +1,15 @@
 apply plugin: 'kotlin-multiplatform'
 
+
 kotlin {
     targets {
+        def iOSTarget = System.getenv('SDK_NAME')?.startsWith("iphoneos") ? presets.iosArm64 : presets.iosX64
+
+        fromPreset(iOSTarget, 'iOS') {
+            compilations.main.outputKinds('FRAMEWORK')
+        }
+
         fromPreset(presets.jvm, 'android')
-
-        fromPreset(presets.iosArm64, 'iOS') {
-            compilations.main.outputKinds('FRAMEWORK')
-        }
-
-        fromPreset(presets.iosX64, 'iOSx64') {
-            compilations.main.outputKinds('FRAMEWORK')
-        }
     }
 
     sourceSets {
@@ -21,8 +20,6 @@ kotlin {
         androidMain.dependencies {
             api 'org.jetbrains.kotlin:kotlin-stdlib'
         }
-
-        iOSx64Main.dependsOn iOSMain
     }
 }
 
@@ -33,13 +30,11 @@ configurations {
 task packForXCode(type: Sync) {
     final File frameworkDir = new File(buildDir, "xcode-frameworks")
     final String mode = System.getenv('CONFIGURATION')?.toUpperCase() ?: 'DEBUG'
-    final String target = System.getenv('SDK_NAME')?.startsWith("iphoneos") ? 'iOS' : 'iOSx64'
 
-    inputs.property "target", target
     inputs.property "mode", mode
-    dependsOn kotlin.targets."$target".compilations.main.linkTaskName("FRAMEWORK", mode)
+    dependsOn kotlin.targets.iOS.compilations.main.linkTaskName("FRAMEWORK", mode)
 
-    from { kotlin.targets."$target".compilations.main.getBinary("FRAMEWORK", mode).parentFile }
+    from { kotlin.targets.iOS.compilations.main.getBinary("FRAMEWORK", mode).parentFile }
     into frameworkDir
 
     doLast {
