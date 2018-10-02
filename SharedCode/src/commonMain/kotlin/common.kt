@@ -1,4 +1,4 @@
-package com.jetbrains.jonnyzzz.common
+package org.kotlin.mpp.mobile
 
 expect fun platformName(): String
 

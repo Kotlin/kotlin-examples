@@ -3,7 +3,7 @@ package com.jetbrains.jonnyzzz.myapplication
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import com.jetbrains.jonnyzzz.common.createApplicationScreenMessage
+import org.kotlin.mpp.mobile.createApplicationScreenMessage
 
 class MainActivity : AppCompatActivity() {
 
