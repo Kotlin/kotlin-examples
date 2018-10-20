@@ -31,7 +31,7 @@ configurations {
 
 task packForXCode(type: Sync) {
     final File frameworkDir = new File(buildDir, "xcode-frameworks")
-    final String mode = System.getenv('CONFIGURATION')?.toUpperCase() ?: 'DEBUG'
+    final String mode = project.findProperty("XCODE_CONFIGURATION")?.toUpperCase() ?: 'DEBUG'
 
     inputs.property "mode", mode
     dependsOn kotlin.targets.iOS.compilations.main.linkTaskName("FRAMEWORK", mode)
