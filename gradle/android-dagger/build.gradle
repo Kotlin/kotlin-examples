@@ -1,12 +1,14 @@
 buildscript {
-    ext.kotlin_version = '1.1.2'
-    ext.dagger_version = '2.10'
+    ext.android_plugin_version = '3.0.0'
+    ext.kotlin_version = '1.1.51'
+    ext.dagger_version = '2.12'
 
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath "com.android.tools.build:gradle:$android_plugin_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -14,5 +16,6 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        google()
     }
 }

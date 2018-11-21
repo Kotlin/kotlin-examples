@@ -33,7 +33,7 @@ class OtherActivity : AppCompatActivity() {
                         "Mostly cloudy",
                         "http://loremflickr.com/800/600/city?random=4"))
 
-        val recyclerView = findViewById(R.id.weather_list) as RecyclerView
+        val recyclerView: RecyclerView = findViewById(R.id.weather_list)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = WeatherAdapter(items)
     }
