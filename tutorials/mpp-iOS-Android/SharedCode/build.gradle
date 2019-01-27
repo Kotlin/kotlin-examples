@@ -6,7 +6,7 @@ kotlin {
         final def iOSTarget = System.getenv('SDK_NAME')?.startsWith("iphoneos") \
                               ? presets.iosArm64 : presets.iosX64
 
-        fromPreset(iOSTarget, 'iOS') {
+        fromPreset(iOSTarget, 'ios') {
             compilations.main.outputKinds('FRAMEWORK')
         }
 
@@ -34,9 +34,9 @@ task packForXCode(type: Sync) {
     final String mode = project.findProperty("XCODE_CONFIGURATION")?.toUpperCase() ?: 'DEBUG'
 
     inputs.property "mode", mode
-    dependsOn kotlin.targets.iOS.compilations.main.linkTaskName("FRAMEWORK", mode)
+    dependsOn kotlin.targets.ios.compilations.main.linkTaskName("FRAMEWORK", mode)
 
-    from { kotlin.targets.iOS.compilations.main.getBinary("FRAMEWORK", mode).parentFile }
+    from { kotlin.targets.ios.compilations.main.getBinary("FRAMEWORK", mode).parentFile }
     into frameworkDir
 
     doLast {
