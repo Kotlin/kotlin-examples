@@ -1,0 +1,3 @@
+rootProject.name = 'dokka-multiproject-gradle-example'
+
+include 'projectA', 'projectB'

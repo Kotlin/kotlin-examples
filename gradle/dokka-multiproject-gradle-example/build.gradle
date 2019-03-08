@@ -1,0 +1,23 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.21'
+    id 'org.jetbrains.dokka' version '0.9.18'
+}
+
+allprojects {
+    apply plugin: 'org.jetbrains.kotlin.jvm'
+    apply plugin: 'org.jetbrains.dokka'
+
+    dependencies{
+        implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    }
+
+    repositories {
+        jcenter()
+    }
+}
+
+dokka {
+    kotlinTasks {
+        defaultKotlinTasks() + [':projectA:compileKotlin', ':projectB:compileKotlin']
+    }    
+}
