@@ -1,18 +1,10 @@
 package ru.trylogic.querydsl.example
 
-import com.mysema.query.jpa.impl.JPAQuery
-import org.hibernate.Hibernate
-import org.hibernate.SessionFactory
-import org.hibernate.cfg.Configuration
-import org.hibernate.cfg.Environment
-
+import com.querydsl.jpa.impl.JPAQuery
+import ru.trylogic.querydsl.example.QUser.user
 import javax.persistence.EntityManager
 import javax.persistence.EntityManagerFactory
-import javax.persistence.EntityTransaction
 import javax.persistence.Persistence
-import java.util.HashMap
-
-import ru.trylogic.querydsl.example.QUser.user
 
 object Test {
     @JvmStatic
@@ -33,12 +25,13 @@ object Test {
 
             transaction.commit()
 
-            val query = JPAQuery(entityManager)
+            val query = JPAQuery<User>(entityManager)
 
             val uniqueUserNames = query.from(user)
                     .where(user.name.like("%ov"))
                     .groupBy(user.name)
-                    .list(user.name)
+                    .select(user.name)
+                    .fetch()
 
             println("Unique names: ")
             uniqueUserNames.forEach { println(it) }
