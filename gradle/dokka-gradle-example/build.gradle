@@ -33,10 +33,6 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
-sourceSets {
-    main.java.srcDirs += 'src/main/kotlin'
-}
-
 dokka {
     outputFormat = "html"
 
