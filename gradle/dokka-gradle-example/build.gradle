@@ -2,7 +2,6 @@ buildscript {
     ext.kotlin_version = '1.3.50'
 
     repositories {
-        mavenLocal()
         mavenCentral()
         jcenter()
         maven {
@@ -23,9 +22,7 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
-    maven {
-        url 'https://dl.bintray.com/kotlin/kotlin-eap'
-    }
+    jcenter()
 }
 
 dependencies {
@@ -37,9 +34,9 @@ dokka {
     outputFormat = "html"
 
     configuration {
-        includes = ['Module.md']
+        includes = ['Module.md']  // include module and package documentation
 
-        sourceLink {
+        sourceLink { // link to sources, this will be rendered as "(source)" link in documentation
             path = "src/main/kotlin"
             url = "https://github.com/Kotlin/kotlin-examples/tree/master/gradle/dokka-gradle-example/src/main/kotlin"
             lineSuffix = "#L"
