@@ -3,8 +3,10 @@ dependencies {
 }
 
 dokka {
-    externalDocumentationLink {
-        url = new URL("file://${project(":projectA").buildDir}/dokka/project-a/")
-        packageListUrl = new URL(url, "package-list")
+    configuration {
+        externalDocumentationLink {
+            url = new URL("file://${project(":projectA").buildDir}/dokka/project-a/")
+            packageListUrl = new URL(url, "package-list")
+        }
     }
 }
