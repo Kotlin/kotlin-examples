@@ -1,8 +1,7 @@
 buildscript {
-    ext.kotlin_version = '1.1.4-3'
+    ext.kotlin_version = '1.3.50'
 
     repositories {
-        mavenLocal()
         mavenCentral()
         jcenter()
         maven {
@@ -12,37 +11,36 @@ buildscript {
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.9"
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.10.0"
     }
 }
 
 apply plugin: 'kotlin'
 apply plugin: 'org.jetbrains.dokka'
 
-sourceCompatibility = 1.5
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
-    maven {
-        url 'https://dl.bintray.com/kotlin/kotlin-eap'
-    }
+    jcenter()
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
-sourceSets {
-    main.java.srcDirs += 'src/main/kotlin'
-}
 
 dokka {
-    includes = ['Module.md']
+    outputFormat = "html"
 
-    linkMapping {
-        dir = "src/main/kotlin"
-        url = "https://github.com/JetBrains/kotlin-examples/tree/master/gradle/dokka-gradle-example/src/main/kotlin"
-        suffix = "#L"
+    configuration {
+        includes = ['Module.md']  // include module and package documentation
+
+        sourceLink { // link to sources, this will be rendered as "(source)" link in documentation
+            path = "src/main/kotlin"
+            url = "https://github.com/Kotlin/kotlin-examples/tree/master/gradle/dokka-gradle-example/src/main/kotlin"
+            lineSuffix = "#L"
+        }
     }
 }
 
