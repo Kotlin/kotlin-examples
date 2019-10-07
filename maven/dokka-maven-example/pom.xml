@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <kotlin.version>1.0.3</kotlin.version>
-        <dokka.version>0.9.9</dokka.version>
+        <dokka.version>0.9.19</dokka.version>
     </properties>
 
     <dependencies>
@@ -41,7 +41,9 @@
                     <execution>
                         <id>test-compile</id>
                         <phase>test-compile</phase>
-                        <goals> <goal>test-compile</goal> </goals>
+                        <goals>
+                          <goal>test-compile</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
@@ -65,9 +67,9 @@
                     </includes>
                     <sourceLinks>
                         <link>
-                            <dir>${project.basedir}</dir>
+                            <path>${project.basedir}</path>
                             <url>https://github.com/JetBrains/kotlin-examples/blob/master/maven/dokka-maven-example</url>
-                            <urlSuffix>#L</urlSuffix>
+                            <lineSuffix>#L</lineSuffix>
                         </link>
                     </sourceLinks>
                 </configuration>
