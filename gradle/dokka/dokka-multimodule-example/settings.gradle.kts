@@ -11,5 +11,9 @@ pluginManagement {
     }
 }
 
+include(":parentProject")
+include(":parentProject:childProjectA")
+include(":parentProject:childProjectB")
+
 rootProject.name = "dokka-multimodule-example"
 
