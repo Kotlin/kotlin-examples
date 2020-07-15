@@ -1,7 +1,7 @@
 pluginManagement {
     plugins {
         kotlin("jvm") version "1.4-M3"
-        id("org.jetbrains.dokka") version ("1.4.0-M3-dev-69")
+        id("org.jetbrains.dokka") version ("1.4.0-M3-dev-80")
     }
     repositories {
         jcenter()

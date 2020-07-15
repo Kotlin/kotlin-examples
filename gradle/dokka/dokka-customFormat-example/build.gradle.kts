@@ -2,7 +2,7 @@ import org.jetbrains.dokka.gradle.DokkaTask
 
 plugins {
     kotlin("jvm") version "1.4-M3"
-    id("org.jetbrains.dokka") version ("1.4.0-M3-dev-69")
+    id("org.jetbrains.dokka") version ("1.4.0-M3-dev-80")
 }
 
 repositories {
@@ -14,7 +14,7 @@ repositories {
 tasks.register<DokkaTask>("dokkaCustomFormat") {
     dependencies {
         // Using the javadoc plugin as "custom format". Can use any plugin here!
-        plugins("org.jetbrains.dokka:javadoc-plugin:1.4.0-M3-dev-69")
+        plugins("org.jetbrains.dokka:javadoc-plugin:1.4.0-M3-dev-80")
     }
 }
 

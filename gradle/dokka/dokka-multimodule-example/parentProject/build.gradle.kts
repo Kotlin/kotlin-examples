@@ -1,4 +1,15 @@
 plugins {
+    /**
+     * Kotlin plugin necessary because of potential Gradle bug!
+     * This is not necessary if the kotlin gradle plugin is added as buildscript
+     * dependency like
+     *
+     * buildscript {
+     *     dependencies {
+     *         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+     *     }
+     * }
+     */
     kotlin("jvm")
     id("org.jetbrains.dokka")
 }
@@ -9,7 +20,7 @@ dependencies {
 
 /**
  * Configuring the html multimodule task
- * Run ./gradlew :parentProject:dokkaHtmlMultimodule dokkaHtml
+ * Run ./gradlew :parentProject:dokkaHtmlMultimodule
  */
 tasks.dokkaHtmlMultimodule {
     documentationFileName = "Module.md"
