@@ -2,13 +2,13 @@ import org.jetbrains.dokka.gradle.DokkaTask
 
 plugins {
     kotlin("jvm") version "1.4-M3"
-    id("org.jetbrains.dokka") version ("1.4.0-M3-dev-69")
+    id("org.jetbrains.dokka") version ("1.4.0-M3-dev-80")
 }
 
 repositories {
     mavenCentral()
     jcenter()
-    maven("https://dl.bintray.com/kotlin/kotlin-dev")
+    maven("https://dl.bintray.com/kotlin/kotlin-eap")
 }
 
 dependencies {
