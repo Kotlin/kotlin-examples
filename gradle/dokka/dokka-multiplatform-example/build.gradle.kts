@@ -2,7 +2,7 @@ import org.jetbrains.dokka.gradle.DokkaTask
 
 plugins {
     kotlin("multiplatform") version "1.4-M3"
-    id("org.jetbrains.dokka") version "1.4-M3-dev-94"
+    id("org.jetbrains.dokka") version "1.4-mc-1"
 }
 
 repositories {
