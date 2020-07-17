@@ -8,6 +8,7 @@ plugins {
 repositories {
     jcenter()
     mavenCentral()
+    maven("https://dl.bintray.com/kotlin/kotlin-eap")
     maven("https://dl.bintray.com/kotlin/kotlin-dev")
 }
 
@@ -51,6 +52,14 @@ tasks.withType<DokkaTask> {
         register("jvmMain") {
             dependsOn("commonMain")
             sourceRoot { path = "src/jvmMain/kotlin" }
+        }
+
+        register("customSourceSet") {
+            this.jdkVersion = 9
+            this.displayName = "Custom JDK 10 Source Set"
+            this.sourceRoot {
+                this.path = "src/customJdk10/kotlin"
+            }
         }
     }
 }
