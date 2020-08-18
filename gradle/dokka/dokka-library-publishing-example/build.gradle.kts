@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.4.0-rc"
-    id("org.jetbrains.dokka") version ("1.4.0-rc")
+    kotlin("jvm") version "1.4.0"
+    id("org.jetbrains.dokka") version ("1.4.10-dev-47")
     `java-library`
     `maven-publish`
 }
@@ -19,13 +19,13 @@ dependencies {
 
 val dokkaJavadocJar by tasks.register<Jar>("dokkaJavadocJar") {
     dependsOn(tasks.dokkaJavadoc)
-    from(tasks.dokkaJavadoc.get().getOutputDirectoryAsFile())
+    from(tasks.dokkaJavadoc.flatMap { it.outputDirectory })
     archiveClassifier.set("javadoc")
 }
 
 val dokkaHtmlJar by tasks.register<Jar>("dokkaHtmlJar") {
     dependsOn(tasks.dokkaHtml)
-    from(tasks.dokkaHtml.get().getOutputDirectoryAsFile())
+    from(tasks.dokkaHtml.flatMap { it.outputDirectory })
     archiveClassifier.set("html-doc")
 }
 

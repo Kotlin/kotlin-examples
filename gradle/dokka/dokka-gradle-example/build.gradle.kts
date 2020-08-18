@@ -1,8 +1,9 @@
 import org.jetbrains.dokka.gradle.DokkaTask
+import java.net.URL
 
 plugins {
-    kotlin("jvm") version "1.4.0-rc"
-    id("org.jetbrains.dokka") version ("1.4.0-rc")
+    kotlin("jvm") version "1.4.0"
+    id("org.jetbrains.dokka") version ("1.4.10-dev-47")
 }
 
 repositories {
@@ -17,16 +18,17 @@ dependencies {
     testImplementation(kotlin("test-junit"))
 }
 
-tasks.withType<DokkaTask> {
+tasks.withType<DokkaTask>().configureEach {
     dokkaSourceSets {
-        register("main") {
-            moduleDisplayName = "Dokka Gradle Example"
-            includes = listOf("Module.md")
+        named("main") {
+            moduleDisplayName.set("Dokka Gradle Example")
+            includes.from("Module.md")
             sourceLink {
-                path = "src/main/kotlin"
-                url = "https://github.com/Kotlin/kotlin-examples/tree/master/" +
+                localDirectory.set(file("src/main/kotlin"))
+                remoteUrl.set(URL("https://github.com/Kotlin/kotlin-examples/tree/master/" +
                         "gradle/dokka/dokka-gradle-example/src/main/kotlin"
-                lineSuffix = "#L"
+                ))
+                remoteLineSuffix.set("#L")
             }
         }
     }
