@@ -22,7 +22,7 @@ dependencies {
  * Configuring the html multimodule task
  * Run ./gradlew :parentProject:dokkaHtmlMultimodule
  */
-tasks.dokkaHtmlMultimodule {
-    documentationFileName = "Module.md"
+tasks.dokkaHtmlMultiModule {
+    documentationFileName.set("Module.md")
 }
 

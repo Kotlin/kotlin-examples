@@ -9,10 +9,10 @@ dependencies {
     implementation(kotlin("stdlib"))
 }
 
-tasks.withType<DokkaTask> {
+tasks.withType<DokkaTask>().configureEach {
     dokkaSourceSets {
         configureEach {
-            includes = listOf("Module.md")
+            includes.from("Module.md")
         }
     }
 }

@@ -1,11 +1,13 @@
 pluginManagement {
     plugins {
-        kotlin("jvm") version "1.4.0-rc"
-        id("org.jetbrains.dokka") version ("1.4.0-rc")
+        kotlin("jvm") version "1.4.0"
+        id("org.jetbrains.dokka") version ("1.4.10-dev-47")
     }
     repositories {
+        gradlePluginPortal()
         jcenter()
         mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev")
     }
 }
 
