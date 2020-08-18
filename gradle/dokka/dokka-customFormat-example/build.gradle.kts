@@ -9,7 +9,7 @@ repositories {
     mavenCentral()
     jcenter()
     maven("https://dl.bintray.com/kotlin/kotlin-eap")
-    maven("https://dl.bintray.com/kotlin/kotlin-dev")
+    maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev")
 }
 
 tasks.register<DokkaTask>("dokkaCustomFormat") {
