@@ -3,7 +3,7 @@ import java.net.URL
 
 plugins {
     kotlin("jvm") version "1.4.0"
-    id("org.jetbrains.dokka") version ("1.4.10-dev-47")
+    id("org.jetbrains.dokka") version ("1.4.0")
 }
 
 repositories {

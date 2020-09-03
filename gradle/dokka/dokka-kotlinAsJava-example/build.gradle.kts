@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm") version "1.4.0"
-    id("org.jetbrains.dokka") version ("1.4.10-dev-47")
+    id("org.jetbrains.dokka") version ("1.4.0")
 }
 
 repositories {
@@ -15,11 +15,11 @@ dependencies {
     testImplementation(kotlin("test-junit"))
 
     // Will apply the plugin to all dokka tasks
-    dokkaPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.4.10-dev-47")
+    dokkaPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.4.0")
 
     // Will apply the plugin only to the `:dokkaHtml` task
-    //dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.4.10-dev-47")
+    //dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.4.0")
 
     // Will apply the plugin only to the `:dokkaGfm` task
-    //dokkaGfmPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.4.10-dev-47")
+    //dokkaGfmPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.4.0")
 }
