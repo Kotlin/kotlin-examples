@@ -1,4 +1,4 @@
-# Module dokka-gradle-example
+# Module Dokka Gradle Example
 
 This is an example of how you can write module documentation with Dokka.
 
