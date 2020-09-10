@@ -1,4 +1,4 @@
-# Module ChildModuleB
+# Module childProjectB
 This is the child module b
 
 # Package demo
