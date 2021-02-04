@@ -4,8 +4,8 @@ import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.dokka.Platform
 
 plugins {
-    kotlin("multiplatform") version "1.4.0"
-    id("org.jetbrains.dokka") version "1.4.0"
+    kotlin("multiplatform") version "1.4.20"
+    id("org.jetbrains.dokka") version "1.4.20"
 }
 
 repositories {
@@ -34,20 +34,12 @@ kotlin {
 tasks.withType<DokkaTask>().configureEach {
     dokkaSourceSets {
         /*
-        Giving all 'native' source sets the same name will make them displayed by a single bubble.
-         */
-        configureEach {
-            if (platform.get() == Platform.native) {
-                displayName.set("native")
-            }
-        }
-        /*
         Create custom source set (not known to the Kotlin Gradle Plugin)
          */
         register("customSourceSet") {
             this.jdkVersion.set(9)
             this.displayName.set("custom")
-            this.sourceRoots.from(file("src/customJdk10/kotlin"))
+            this.sourceRoots.from(file("src/customJdk9/kotlin"))
         }
     }
 }
