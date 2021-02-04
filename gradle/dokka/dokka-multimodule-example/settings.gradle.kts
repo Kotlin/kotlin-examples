@@ -1,7 +1,7 @@
 pluginManagement {
     plugins {
-        kotlin("jvm") version "1.4.0"
-        id("org.jetbrains.dokka") version ("1.4.0")
+        kotlin("jvm") version "1.4.20"
+        id("org.jetbrains.dokka") version ("1.4.20")
     }
     repositories {
         gradlePluginPortal()

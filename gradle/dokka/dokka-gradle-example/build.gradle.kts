@@ -2,8 +2,8 @@ import org.jetbrains.dokka.gradle.DokkaTask
 import java.net.URL
 
 plugins {
-    kotlin("jvm") version "1.4.0"
-    id("org.jetbrains.dokka") version ("1.4.0")
+    kotlin("jvm") version "1.4.20"
+    id("org.jetbrains.dokka") version ("1.4.20")
 }
 
 repositories {
@@ -21,7 +21,7 @@ dependencies {
 tasks.withType<DokkaTask>().configureEach {
     dokkaSourceSets {
         named("main") {
-            moduleDisplayName.set("Dokka Gradle Example")
+            moduleName.set("Dokka Gradle Example")
             includes.from("Module.md")
             sourceLink {
                 localDirectory.set(file("src/main/kotlin"))

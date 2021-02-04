@@ -8,8 +8,8 @@
     <artifactId>kotlin-maven-example</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <kotlin.version>1.0.3</kotlin.version>
-        <dokka.version>0.10.0</dokka.version>
+        <kotlin.version>1.4.20</kotlin.version>
+        <dokka.version>1.4.20</dokka.version>
     </properties>
 
     <dependencies>
@@ -57,14 +57,10 @@
                         <phase>pre-site</phase>
                         <goals>
                             <goal>dokka</goal>
-                            <goal>javadoc</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <includes>
-                        <include>Module.md</include>
-                    </includes>
                     <sourceLinks>
                         <link>
                             <path>${project.basedir}</path>
@@ -82,9 +78,6 @@
             <id>jcenter</id>
             <name>JCenter</name>
             <url>https://jcenter.bintray.com/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
         </pluginRepository>
     </pluginRepositories>
 </project>

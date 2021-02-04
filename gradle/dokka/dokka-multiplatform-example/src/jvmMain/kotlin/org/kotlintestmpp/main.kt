@@ -18,6 +18,9 @@ fun CoroutineScope.startConnectionPipeline(
     input: String
 ): Job = launch { TODO () }
 
+/**
+ * Actual function for jvm
+ */
 actual fun getCurrentDate(): String {
     return "test"
 }

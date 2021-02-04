@@ -7,6 +7,9 @@ fun main(args : Array<String>) {
 fun js(){}
 fun shared(){}
 
+/**
+ * Actual function for js
+ */
 actual fun getCurrentDate(): String {
     return "test"
 }

@@ -18,11 +18,3 @@ dependencies {
     implementation(kotlin("stdlib"))
 }
 
-/**
- * Configuring the html multimodule task
- * Run ./gradlew :parentProject:dokkaHtmlMultimodule
- */
-tasks.dokkaHtmlMultiModule {
-    documentationFileName.set("Module.md")
-}
-
