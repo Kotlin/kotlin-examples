@@ -1,15 +1,12 @@
 plugins {
-    kotlin("jvm") version "1.4.20"
-    id("org.jetbrains.dokka") version ("1.4.20")
+    kotlin("jvm") version "1.4.32"
+    id("org.jetbrains.dokka") version ("1.4.32")
     `java-library`
     `maven-publish`
 }
 
 repositories {
     mavenCentral()
-    jcenter()
-    maven("https://dl.bintray.com/kotlin/kotlin-eap")
-    maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev")
 }
 
 dependencies {
