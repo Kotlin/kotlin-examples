@@ -1,4 +1,4 @@
-import org.jetbrains.dokka.gradle.DokkaTask
+import org.jetbrains.dokka.gradle.DokkaTaskPartial
 
 plugins {
     kotlin("jvm")
@@ -9,7 +9,7 @@ dependencies {
     implementation(kotlin("stdlib"))
 }
 
-tasks.withType<DokkaTask>().configureEach {
+tasks.withType<DokkaTaskPartial>().configureEach {
     dokkaSourceSets {
         configureEach {
             includes.from("Module.md")

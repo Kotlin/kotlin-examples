@@ -1,24 +1,18 @@
 import org.jetbrains.dokka.gradle.DokkaTask
 
 plugins {
-    kotlin("jvm") version "1.4.20"
-    id("org.jetbrains.dokka") version ("1.4.20")
+    kotlin("jvm") version "1.4.32"
+    id("org.jetbrains.dokka") version ("1.4.32")
 }
 
 buildscript {
-    repositories {
-        jcenter()
-    }
     dependencies {
-        classpath("org.jetbrains.dokka:dokka-base:1.4.20")
+        classpath("org.jetbrains.dokka:dokka-base:1.4.32")
     }
 }
 
 repositories {
     mavenCentral()
-    jcenter()
-    maven("https://dl.bintray.com/kotlin/kotlin-eap")
-    maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev")
 }
 
 /**
