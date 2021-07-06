@@ -16,8 +16,8 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'idea'
 
 dependencies {
-  compile "com.mysema.querydsl:querydsl-jpa:3.6.3"
-  kapt "com.mysema.querydsl:querydsl-apt:3.6.3:jpa" // Magic happens here
+  compile "com.querydsl:querydsl-jpa:4.2.1"
+  kapt "com.querydsl:querydsl-apt:4.2.1:jpa" // Magic happens here
   
   compile "org.hibernate:hibernate-entitymanager:4.3.5.Final"
   
