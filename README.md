@@ -15,6 +15,10 @@ If anything is missing or seems confusing, please create an issue in the [Kotlin
 - https://github.com/Kotlin/multitarget-xcode-with-kotlin-cocoapods-sample - This project is intended to demonstrate how to connect Kotlin library to Xcode project with several targets: iOS, macOS, tvOS, watchOS
 - https://github.com/Kotlin/xcode-two-kmm-pods-sample - This project is intended to demonstrate the connection of two Kotlin libraries to existing Xcode project through Cocoapods.
 
+[Kotlin for Server-side](https://kotlinlang.org/lp/server-side/):
+- https://github.com/ktorio/ktor-samples - A collection of ready-to-use samples for [Ktor](https://ktor.io/).
+- https://github.com/spring-petclinic/spring-petclinic-kotlin - This is a Kotlin version of the [spring-petclinic](https://github.com/spring-projects/spring-petclinic) application.
+
 [Kotlin for Web frontend](https://kotlinlang.org/docs/js-overview.html):
 - https://github.com/Kotlin/full-stack-web-jetbrains-night-sample - A full-stack demo application written in Kotlin for JetBrains Night Moscow 2019.
 - This project is a PoC of using Kotlin (JS) and React, React-Dom, React-Router, Redux and React-Redux. This project is an implementation/translation of the react-redux [Todo List example project](https://redux.js.org/basics/example) in Kotlin (with the addition of react-router).
