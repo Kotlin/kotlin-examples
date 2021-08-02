@@ -21,7 +21,7 @@ If anything is missing or seems confusing, please create an issue in the [Kotlin
 
 [Kotlin for Web frontend](https://kotlinlang.org/docs/js-overview.html):
 - https://github.com/Kotlin/full-stack-web-jetbrains-night-sample - A full-stack demo application written in Kotlin for JetBrains Night Moscow 2019.
-- This project is a PoC of using Kotlin (JS) and React, React-Dom, React-Router, Redux and React-Redux. This project is an implementation/translation of the react-redux [Todo List example project](https://redux.js.org/basics/example) in Kotlin (with the addition of react-router).
+- https://github.com/Kotlin/react-redux-todo-list-sample - This project is a PoC of using Kotlin (JS) and React, React-Dom, React-Router, Redux and React-Redux. This project is an implementation/translation of the react-redux [Todo List example project](https://redux.js.org/basics/example) in Kotlin (with the addition of react-router).
 
 [Kotlin Native](https://kotlinlang.org/docs/native-overview.html):
 - https://github.com/JetBrains/kotlin/tree/master/kotlin-native/samples - This repository contains a set of samples demonstrating how one can work with Kotlin/Native. 
