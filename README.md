@@ -9,11 +9,11 @@ If anything is missing or seems confusing, please create an issue in the [Kotlin
 
 [Kotlin Multiplatform Mobile](https://kotlinlang.org/lp/mobile/):
 - https://github.com/Kotlin/kmm-production-sample - This is an open-source, mobile, cross-platform application built with Kotlin Multiplatform Mobile (KMM). It’s a simple RSS reader, and you can download it from the [App Store](https://apps.apple.com/ru/app/kmm-rss-reader/id1563922264) and [Google Play](https://play.google.com/store/apps/details?id=com.github.jetbrains.rssreader.androidApp). It’s been designed to demonstrate how KMM can be used in real production projects.
-- https://github.com/Kotlin/kmm-sample - This is a Kotlin Multiplatform Mobile (KMM) sample project. It includes iOS and Android applications with a native UI and a module with code shared on iOS and Android.
+- https://github.com/Kotlin/kmm-basic-sample - This is a Kotlin Multiplatform Mobile (KMM) sample project. It includes iOS and Android applications with a native UI and a module with code shared on iOS and Android.
 - https://github.com/Kotlin/kmm-integration-sample - This is a sample project for the ["Make your Android application work on iOS"](https://kotlinlang.org/docs/mobile/integrate-in-existing-app.html) tutorial. Master branch contains the project’s initial state: it’s a simple Android application generated with the Android Studio “Login application” wizard. You could find the final state with the iOS application and shared KMM module in the [final branch](https://github.com/Kotlin/kmm-integration-sample/tree/final).
-- https://github.com/Kotlin/kotlin-with-cocoapods-sample  - This is a sample project  represents the case when Cocoapods dependencies added in Kotlin and there is no existing Xcode project.
-- https://github.com/Kotlin/multitarget-xcode-with-kotlin-cocoapods-sample - This project is intended to demonstrate how to connect Kotlin library to Xcode project with several targets: iOS, macOS, tvOS, watchOS
-- https://github.com/Kotlin/xcode-two-kmm-pods-sample - This project is intended to demonstrate the connection of two Kotlin libraries to existing Xcode project through Cocoapods.
+- https://github.com/Kotlin/kmm-with-cocoapods-sample  - This is a sample project  represents the case when Cocoapods dependencies added in Kotlin and there is no existing Xcode project.
+- https://github.com/Kotlin/kmm-with-cocoapods-multitarget-xcode-sample - This project is intended to demonstrate how to connect Kotlin library to Xcode project with several targets: iOS, macOS, tvOS, watchOS
+- https://github.com/Kotlin/kmm-with-cocoapods-xcode-two-kotlin-libraries-sample - This project is intended to demonstrate the connection of two Kotlin libraries to existing Xcode project through Cocoapods.
 
 [Kotlin for Server-side](https://kotlinlang.org/lp/server-side/):
 - https://github.com/ktorio/ktor-samples - A collection of ready-to-use samples for [Ktor](https://ktor.io/).
