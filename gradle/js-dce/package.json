@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "webpack": "3.4.1"
-  },
-  "scripts": {
-    "bundle" : "webpack"
-  }
-}

@@ -1,2 +1,0 @@
-This project is imported and J2K-ed from this repository:
-https://github.com/bsideup/querydsl-gradle-idea

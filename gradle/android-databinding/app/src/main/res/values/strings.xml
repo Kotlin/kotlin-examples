@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">android-databinding</string>
-    <string name="next">Next</string>
-    <string name="image">Random city image</string>
-    <string name="change">Change</string>
-</resources>

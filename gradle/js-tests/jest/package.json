@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "test": "./gradlew test"
-  },
-  "jest": {
-     "testRegex": "_test\\.js$"
-  }
-}
