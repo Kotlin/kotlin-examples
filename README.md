@@ -1,7 +1,11 @@
 kotlin-examples
 ===============
 
-[![official JetBrains project](http://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+[![Obsolete JetBrains project](http://jb.gg/badges/obsolete.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+
+The repository is archived as we have moved towards other sources of examples, including project-specific and tutorial-based ones, such as https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-samples.html, https://github.com/ktorio/ktor-samples and https://developer.android.com/samples.
+
+===
 
 Various examples for [Kotlin](https://kotlinlang.org/)
 
